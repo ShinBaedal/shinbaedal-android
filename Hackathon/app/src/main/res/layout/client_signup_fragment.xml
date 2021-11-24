@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.ClientSignupFragment">
+
+        <EditText
+            android:id="@+id/edt_email_signup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="e-mail"
+            app:layout_constraintEnd_toStartOf="@+id/btn_request_auth_signup"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_request_auth_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증 요청"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:hint="code"
+            android:id="@+id/edt_auth_code_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email_signup" />
+
+        <EditText
+            android:hint="password"
+            android:inputType="textPassword"
+            android:id="@+id/edt_pw_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_auth_code_signup" />
+
+        <EditText
+            android:id="@+id/edt_pw_again_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password again"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_address_signup" />
+
+        <EditText
+            android:id="@+id/edt_address_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_pw_signup" />\
+
+        <EditText
+            android:id="@+id/edt_name_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_pw_again_signup" />
+        
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
