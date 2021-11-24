@@ -5,43 +5,28 @@
 
     <data>
 
-        <variable
-            name="type"
-            type="com.example.hackathon.domain.entity.Type" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.fragment.SignupFragment">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{@string/nameFormat(type.typeName)}"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="손님 회원가입" />
+        tools:context=".view.fragment.ClientLoginFragment">
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/container_client_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
             android:orientation="vertical"
-            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="비밀번호 입력"
+                android:text="이메일"
                 android:textColor="@color/black" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -49,18 +34,19 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_pw_signup"
+                    android:id="@+id/edt_email_owner_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="password"
+                    android:hint="이메일 입력.."
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:id="@+id/t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="비밀번호 확인"
+                android:layout_marginTop="20dp"
+                android:text="비밀번호"
                 android:textColor="@color/black" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -68,55 +54,46 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_pw_again_signup"
+                    android:id="@+id/edt_pw_client_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="password again"
+                    android:hint="비밀번호 입력.."
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="이름"
-                android:textColor="@color/black" />
-
-            <com.google.android.material.textfield.TextInputLayout
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login_owner_login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edt_name_signup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="name"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/main"
+                android:text="로그인"
+                android:textColor="@color/white" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="@color/main"
-            android:text="회원가입"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_to_client_owner_login"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="로그인 하러 가기>"
+            android:text="<손님으로"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/container_client_login"
+            app:layout_constraintTop_toBottomOf="@+id/container_client_login" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_to_signup_owner_login"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입 하러 가기"
             android:textColor="@color/dark_grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

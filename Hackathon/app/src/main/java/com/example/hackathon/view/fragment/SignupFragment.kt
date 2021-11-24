@@ -5,23 +5,98 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.hackathon.R
+import com.example.hackathon.data.pref.Pref
+import com.example.hackathon.databinding.SignupFragmentBinding
+import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.viewmodel.SignupViewModel
 
 class SignupFragment : Fragment() {
 
     private val viewModel: SignupViewModel by viewModels()
+    private lateinit var binding: SignupFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.client_signup_fragment, container, false)
+    ): View {
+        binding = SignupFragmentBinding.inflate(layoutInflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    private fun binding() {
+        binding.btnSignupSignup.setOnClickListener {
+            if (checkInput()) {
+                signup()
+            }
+        }
+    }
+
+    private fun checkInput(): Boolean {
+        val pw = binding.edtPwSignup
+        val pwAgain = binding.edtPwAgainSignup
+        val name = binding.edtNameSignup
+
+
+        if (pw.text != pwAgain.text) return false
+
+        return true
+
+    }
+
+    private fun signup() {
+        val email = arguments?.getString("type")!!
+        val pw = binding.edtPwSignup.text.toString()
+        val name = binding.edtNameSignup.text.toString()
+        val isClient = binding.radioClientSignup.isChecked
+        if (isClient) {
+            viewModel.signupClient(email, pw, name)
+        } else {
+            viewModel.signupOwner(email, pw, name)
+        }
+    }
+
+
+    private fun observe() {
+        viewModel.clientSignupState.observe(viewLifecycleOwner) {
+            when (it) {
+                is DataState.Success -> {
+                    Pref.token = it.data.token
+                    Pref.isOwner = false
+                    findNavController().navigate(R.id.action_signupFragment_to_mainFragment)
+                }
+                is DataState.Failure -> {
+                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                }
+                is DataState.Loading -> {
+
+                }
+            }
+        }
+
+        viewModel.ownerSignupState.observe(viewLifecycleOwner) {
+            when (it) {
+                is DataState.Success -> {
+                    Pref.token = it.data.token
+                    Pref.isOwner = true
+                    findNavController().navigate(R.id.action_signupFragment_to_mainFragment)
+                }
+                is DataState.Failure -> {
+                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                }
+                is DataState.Loading -> {
+
+                }
+            }
+        }
 
     }
 }

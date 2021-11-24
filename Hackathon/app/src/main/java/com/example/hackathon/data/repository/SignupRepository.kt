@@ -1,4 +1,4 @@
-package com.example.hackathon.network.repository
+package com.example.hackathon.data.repository
 
 import com.example.hackathon.domain.request.SignupRequest
 import com.example.hackathon.domain.response.AuthToken

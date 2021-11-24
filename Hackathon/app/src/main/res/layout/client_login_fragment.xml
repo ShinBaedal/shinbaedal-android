@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_email_login"
+                    android:id="@+id/edt_email_owner_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="이메일 입력.."
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_pw_signup"
+                    android:id="@+id/edt_pw_client_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="비밀번호 입력.."
@@ -62,7 +62,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_login_login"
+                android:id="@+id/btn_login_owner_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -72,7 +72,7 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_to_owner_login"
+            android:id="@+id/btn_to_client_owner_login"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
             app:layout_constraintTop_toBottomOf="@+id/container_client_login" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_to_signup_login"
+            android:id="@+id/btn_to_signup_owner_login"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

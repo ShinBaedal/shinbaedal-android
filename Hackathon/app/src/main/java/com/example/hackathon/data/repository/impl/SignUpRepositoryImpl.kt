@@ -1,11 +1,11 @@
-package com.example.hackathon.network.repository.impl
+package com.example.hackathon.data.repository.impl
 
 import com.example.hackathon.domain.request.SignupRequest
 import com.example.hackathon.domain.response.AuthToken
 import com.example.hackathon.domain.response.BaseResponse
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.network.datasource.AccountDataSource
-import com.example.hackathon.network.repository.SignupRepository
+import com.example.hackathon.data.datasource.AccountDataSource
+import com.example.hackathon.data.repository.SignupRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
