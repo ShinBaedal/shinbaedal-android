@@ -201,6 +201,7 @@
                     </HorizontalScrollView>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_stores_client_main"
                         tools:listitem="@layout/rv_item_store_vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
