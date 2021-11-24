@@ -29,6 +29,13 @@ class ClientLoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind()
+        observe()
+        autoLogin()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModelStore.clear()
     }
 
     private fun login() {
@@ -36,6 +43,14 @@ class ClientLoginFragment : Fragment() {
         val pw = binding.edtPwClientLogin.text.toString()
 
         viewModel.loginClient(email, pw)
+    }
+
+    private fun autoLogin() {
+        if (Pref.isOwner && Pref.token != null) {
+            navigateToOwnerMain()
+        } else if (!Pref.isOwner && Pref.token != null) {
+            navigateToClientMain()
+        }
     }
 
     private fun bind() {
@@ -46,7 +61,7 @@ class ClientLoginFragment : Fragment() {
             findNavController().navigate(R.id.action_clientLoginFragment_to_emailAuthFragment)
         }
         binding.btnLoginOwnerLogin.setOnClickListener {
-
+            login()
         }
     }
 
@@ -56,6 +71,9 @@ class ClientLoginFragment : Fragment() {
                 is DataState.Success -> {
                     Pref.token = it.data.token
                     Pref.isOwner = false
+
+                    viewModelStore.clear()
+                    navigateToClientMain()
                 }
                 is DataState.Failure -> {
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
@@ -67,8 +85,13 @@ class ClientLoginFragment : Fragment() {
         }
     }
 
-    fun navigateToOwnerMain() {
-        findNavController().navigate(R.id.action_clientLoginFragment_to_ownerLoginFragment)
+    private fun navigateToOwnerMain() {
+        findNavController().navigate(R.id.action_clientLoginFragment_to_ownerMainFragment)
+    }
+
+    private fun navigateToClientMain() {
+
+        findNavController().navigate(R.id.action_clientLoginFragment_to_clientMainFragment)
     }
 
 

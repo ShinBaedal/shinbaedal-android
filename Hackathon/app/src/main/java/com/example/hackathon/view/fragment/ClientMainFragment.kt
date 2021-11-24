@@ -10,10 +10,6 @@ import com.example.hackathon.viewmodel.ClientMainViewModel
 
 class ClientMainFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ClientMainFragment()
-    }
-
     private lateinit var viewModel: ClientMainViewModel
 
     override fun onCreateView(

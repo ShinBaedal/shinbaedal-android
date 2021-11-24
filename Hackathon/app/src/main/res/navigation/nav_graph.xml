@@ -15,6 +15,12 @@
         <action
             android:id="@+id/action_clientLoginFragment_to_ownerLoginFragment"
             app:destination="@id/ownerLoginFragment" />
+        <action
+            android:id="@+id/action_clientLoginFragment_to_ownerMainFragment"
+            app:destination="@id/ownerMainFragment" />
+        <action
+            android:id="@+id/action_clientLoginFragment_to_clientMainFragment"
+            app:destination="@id/clientMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
@@ -42,6 +48,9 @@
         <action
             android:id="@+id/action_ownerLoginFragment_to_emailAuthFragment"
             app:destination="@id/emailAuthFragment" />
+        <action
+            android:id="@+id/action_ownerLoginFragment_to_ownerMainFragment"
+            app:destination="@id/ownerMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/ownerMainFragment"

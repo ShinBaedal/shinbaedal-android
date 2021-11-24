@@ -13,7 +13,7 @@
         tools:context=".view.fragment.ClientLoginFragment">
 
         <LinearLayout
-            android:id="@+id/container_client_login"
+            android:id="@+id/container_owner_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_pw_client_login"
+                    android:id="@+id/edt_pw_owner_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="비밀번호 입력.."
@@ -78,8 +78,8 @@
             android:layout_height="wrap_content"
             android:text="<손님으로"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/container_client_login"
-            app:layout_constraintTop_toBottomOf="@+id/container_client_login" />
+            app:layout_constraintStart_toStartOf="@+id/container_owner_login"
+            app:layout_constraintTop_toBottomOf="@+id/container_owner_login" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_to_signup_owner_login"

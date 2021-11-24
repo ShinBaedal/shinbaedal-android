@@ -4,7 +4,7 @@ import com.example.hackathon.di.HiltApplication
 
 object Pref {
     var token
-        get() = HiltApplication.mPreferences.getString("token", "")
+        get() = HiltApplication.mPreferences.getString("token", null)
         set(value) {
             HiltApplication.mPreferences.edit().putString("token", value).apply()
         }

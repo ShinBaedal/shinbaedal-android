@@ -71,7 +71,7 @@ class SignupFragment : Fragment() {
                 is DataState.Success -> {
                     Pref.token = it.data.token
                     Pref.isOwner = false
-                    findNavController().navigate(R.id.action_signupFragment_to_mainFragment)
+                    findNavController().navigate(R.id.action_signupFragment_to_clientMainFragment)
                 }
                 is DataState.Failure -> {
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
@@ -87,7 +87,7 @@ class SignupFragment : Fragment() {
                 is DataState.Success -> {
                     Pref.token = it.data.token
                     Pref.isOwner = true
-                    findNavController().navigate(R.id.action_signupFragment_to_mainFragment)
+                    findNavController().navigate(R.id.action_signupFragment_to_ownerMainFragment)
                 }
                 is DataState.Failure -> {
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
