@@ -11,4 +11,12 @@
     <color name="dark_grey">#5E5E5E</color>
 
     <color name="main">#05D686</color>
+    <color name="light_gray">#F1F1F1</color>
+    <color name="green">#05D686</color>
+    <color name="gray">#B1B1B1</color>
+
+    <color name="checkedChipBackgroundColor">@color/green</color>
+    <color name="chipBackgroundColor">@color/light_gray</color>
+    <color name="checkedChipTextColor">@color/white</color>
+    <color name="chipTextColor">@color/gray</color>
 </resources>
