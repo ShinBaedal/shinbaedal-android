@@ -5,8 +5,7 @@ import com.example.hackathon.domain.request.SignupRequest
 import com.example.hackathon.domain.response.BaseResponse
 import com.example.hackathon.domain.response.DataResponse
 import com.example.hackathon.domain.response.AuthToken
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.*
 
 //로그인 회원가입
 interface AccountApi {
@@ -23,10 +22,10 @@ interface AccountApi {
     suspend fun signupClient(@Body body: SignupRequest): DataResponse<AuthToken>
 
 
-    @POST("email")
-    suspend fun requestEmailAuth(@Body email:String): BaseResponse
+    @GET("email/{email}")
+    suspend fun requestEmailAuth(@Query("email") email: String): BaseResponse
 
-    @POST("code")
+    @POST("email")
     suspend fun checkCode(@Body code: Int): BaseResponse
 
 }
