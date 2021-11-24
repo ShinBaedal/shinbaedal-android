@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.example.hackathon.R
 import com.example.hackathon.viewmodel.SignupViewModel
 
-class ClientSignupFragment : Fragment() {
+class SignupFragment : Fragment() {
 
     private val viewModel: SignupViewModel by viewModels()
 

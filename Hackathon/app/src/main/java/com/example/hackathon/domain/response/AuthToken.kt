@@ -1,3 +1,3 @@
 package com.example.hackathon.domain.response
 
-data class TokenResponse(val token:String)
+data class AuthToken(val token:String)

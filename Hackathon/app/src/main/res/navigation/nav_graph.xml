@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/clientLoginFragment">
+
+    <fragment
+        android:id="@+id/clientLoginFragment"
+        android:name="com.example.hackathon.view.fragment.ClientLoginFragment"
+        android:label="ClientLoginFragment" >
+        <action
+            android:id="@+id/action_clientLoginFragment_to_emailAuthFragment"
+            app:destination="@id/emailAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientSignupFragment"
+        android:name="com.example.hackathon.view.fragment.SignupFragment"
+        android:label="ClientSignupFragment" />
+    <fragment
+        android:id="@+id/emailAuthFragment"
+        android:name="com.example.hackathon.view.fragment.EmailAuthFragment"
+        android:label="EmailAuthFragment" >
+        <action
+            android:id="@+id/action_emailAuthFragment_to_clientSignupFragment"
+            app:destination="@id/clientSignupFragment" />
+    </fragment>
+</navigation>

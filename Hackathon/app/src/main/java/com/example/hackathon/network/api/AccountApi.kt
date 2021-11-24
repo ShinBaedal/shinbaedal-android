@@ -1,11 +1,10 @@
-package com.example.hackathon.network
+package com.example.hackathon.network.api
 
 import com.example.hackathon.domain.request.LoginRequest
-import com.example.hackathon.domain.request.SignupClientRequest
-import com.example.hackathon.domain.request.SignupOwnerRequest
+import com.example.hackathon.domain.request.SignupRequest
 import com.example.hackathon.domain.response.BaseResponse
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.TokenResponse
+import com.example.hackathon.domain.response.AuthToken
 import retrofit2.http.Body
 import retrofit2.http.POST
 
@@ -18,15 +17,21 @@ interface AccountApi {
     suspend fun loginClient(@Body body: LoginRequest): BaseResponse
 
     @POST("signup/owner")
-    suspend fun signupOwner(@Body body:SignupOwnerRequest):DataResponse<TokenResponse>
+    suspend fun signupOwner(@Body body: SignupRequest): DataResponse<AuthToken>
 
     @POST("signup/client")
-    suspend fun signupClient(@Body body:SignupClientRequest):DataResponse<TokenResponse>
+    suspend fun signupClient(@Body body: SignupRequest): DataResponse<AuthToken>
 
     @POST("autologin/owner")
-    suspend fun autoLoginOwner():BaseResponse
+    suspend fun autoLoginOwner(): BaseResponse
 
     @POST("autologin/client")
-    suspend fun autoLoginClient():BaseResponse
+    suspend fun autoLoginClient(): BaseResponse
+
+    @POST("email")
+    suspend fun requestEmailAuth(@Body email:String): BaseResponse
+
+    @POST("code")
+    suspend fun checkCode(@Body code: Int): BaseResponse
 
 }

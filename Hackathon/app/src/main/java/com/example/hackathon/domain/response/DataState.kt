@@ -1,4 +1,4 @@
-package com.example.hackathon.domain
+package com.example.hackathon.domain.response
 
 
 sealed class DataState<out T> {

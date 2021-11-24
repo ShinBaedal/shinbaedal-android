@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/card_rectangle.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/layout/client_login_fragment.xml" value="0.18324728617437086" />
+        <entry key="app/src/main/res/layout/client_signup_fragment.xml" value="0.23639544167814247" />
+        <entry key="app/src/main/res/layout/email_auth_fragment.xml" value="0.2198210388525638" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.41354166666666664" />
         <entry key="app/src/main/res/layout/signup_fragment.xml" value="0.19989708431177464" />
       </map>
