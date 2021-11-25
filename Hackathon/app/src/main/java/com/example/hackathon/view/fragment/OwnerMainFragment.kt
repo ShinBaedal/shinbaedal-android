@@ -13,7 +13,10 @@ import com.example.hackathon.adapter.OwnerMainAdapter
 import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.base.toMultipartBody
 import com.example.hackathon.databinding.OwnerMainFragmentBinding
+import com.example.hackathon.databinding.OwnerStoreAddBottomSheetDialogBinding
 import com.example.hackathon.domain.response.DataState
+import com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragment
+import com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragmentDirections
 import com.example.hackathon.viewmodel.OwnerMainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -35,6 +38,7 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
         setAdapter()
         observe()
         getData()
+        addStoreClick()
     }
 
     override fun OwnerMainFragmentBinding.onCreateView() {
@@ -55,6 +59,13 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
             layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
+        }
+    }
+
+    fun addStoreClick() {
+        binding.addStoreLayout.setOnClickListener {
+            val dialog = OwnerStoreAddBottomSheetFragment()
+            dialog.show(parentFragmentManager, "OwnerStoreAddBottomSheetFragment")
         }
     }
 

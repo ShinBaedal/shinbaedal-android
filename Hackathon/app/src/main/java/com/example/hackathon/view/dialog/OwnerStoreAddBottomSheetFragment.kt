@@ -6,7 +6,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.hackathon.R
 import com.example.hackathon.base.BaseDialogFragment
 import com.example.hackathon.databinding.OwnerStoreAddBottomSheetDialogBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OwnerStoreAddBottomSheetFragment :
     BaseDialogFragment<OwnerStoreAddBottomSheetDialogBinding>(R.layout.owner_store_add_bottom_sheet_dialog) {
 
@@ -15,6 +17,7 @@ class OwnerStoreAddBottomSheetFragment :
     }
 
     override fun OwnerStoreAddBottomSheetDialogBinding.onViewCreated() {
+        sendData()
 
     }
 
@@ -30,8 +33,6 @@ class OwnerStoreAddBottomSheetFragment :
 
     private fun textNullTest() =
         !(TextUtils.isEmpty(binding.menuNameTxt.toString())) && !(TextUtils.isEmpty(binding.menuPriceTxt.toString()))
-
-
 
 
 }

@@ -25,10 +25,10 @@ class ClientMainViewModel @Inject constructor(
     val myInfoState = MutableLiveData<Me>()
 
 
-    fun getStores(address: String) {
+    fun getStores(category: String,address: String) {
         job = viewModelScope.launch {
             getStoresState.postValue(DataState.Loading)
-            storeRepository.getStores(address)
+            storeRepository.getStores(category,address)
                 .catch {
                     Log.d(TAG, it.message.toString())
                     getStoresState.postValue(DataState.Failure(500, "서버 연결에 실패했어요"))
