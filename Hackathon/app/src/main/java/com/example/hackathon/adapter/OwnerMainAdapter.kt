@@ -1,6 +1,7 @@
 package com.example.hackathon.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -8,18 +9,24 @@ import com.example.hackathon.R
 import com.example.hackathon.databinding.OwnerMainFragmentBinding
 import com.example.hackathon.databinding.OwnerMainItemBinding
 import com.example.hackathon.domain.entity.Store
+import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 
-class OwnerMainAdapter : RecyclerView.Adapter<OwnerMainAdapter.OwnerMainViewHolder>() {
+class OwnerMainAdapter(val onClickListener: RecyclerViewItemClickListener<Store>) :
+    RecyclerView.Adapter<OwnerMainAdapter.OwnerMainViewHolder>() {
 
 
     private val ownerMainList = mutableListOf<Store>()
 
-    class OwnerMainViewHolder(private val binding: OwnerMainItemBinding) :
+    inner class OwnerMainViewHolder(private val binding: OwnerMainItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data: Store) {
             binding.data = data
             binding.executePendingBindings()
+
+            binding.root.setOnClickListener {
+                onClickListener.onclick(data)
+            }
         }
 
     }
@@ -39,7 +46,8 @@ class OwnerMainAdapter : RecyclerView.Adapter<OwnerMainAdapter.OwnerMainViewHold
 
         return OwnerMainViewHolder(binding)
     }
-    fun setList(list:List<Store>){
+
+    fun setList(list: List<Store>) {
         ownerMainList.clear()
         ownerMainList.addAll(list)
         notifyDataSetChanged()

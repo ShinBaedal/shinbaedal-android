@@ -56,46 +56,43 @@
         android:id="@+id/ownerMainFragment"
         android:name="com.example.hackathon.view.fragment.OwnerMainFragment"
         android:label="owner_main_fragment"
-        tools:layout="@layout/owner_main_fragment" />
+        tools:layout="@layout/owner_main_fragment" >
+        <action
+            android:id="@+id/action_ownerMainFragment_to_ownerDetailFragment"
+            app:destination="@id/ownerDetailFragment" />
+        <action
+            android:id="@+id/action_ownerMainFragment_to_ownerOrderListFragment"
+            app:destination="@id/ownerOrderListFragment" />
+        <action
+            android:id="@+id/action_ownerMainFragment_to_ownerStoreAddFragment"
+            app:destination="@id/ownerStoreAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/clientMainFragment"
         android:name="com.example.hackathon.view.fragment.ClientMainFragment"
         android:label="client_main_fragment"
-        tools:layout="@layout/client_main_fragment" />
-    <fragment
-        android:id="@+id/ownerStoreAddBottomSheetDialog"
-        tools:layout="@layout/owner_store_add_bottom_sheet_dialog"
-        android:name="com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragment"
-        android:label="OwnerStoreAddBottomSheetDialog" >
-
+        tools:layout="@layout/client_main_fragment" >
         <action
-            android:id="@+id/action_ownerStoreAddBottomSheetDialog_to_ownerStoreAddFragment"
-            app:destination="@id/ownerStoreAddFragment" />
+            android:id="@+id/action_clientMainFragment_to_clientDetailFragment"
+            app:destination="@id/clientDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/ownerStoreAddFragment"
         tools:layout="@layout/owner_store_add_fragment"
         android:name="com.example.hackathon.view.fragment.OwnerStoreAddFragment"
-        android:label="OwnerStoreAddFragment" >
-        <action
-            android:id="@+id/action_ownerStoreAddFragment_to_ownerStoreAddBottomSheetDialog"
-            app:destination="@id/ownerStoreAddBottomSheetDialog" />
-    </fragment>
-    <dialog
-        android:id="@+id/reviewBottomSheetDialogFragment"
-        android:name="com.example.hackathon.view.dialog.ReviewBottomSheetDialogFragment"
-        android:label="ReviewBottomSheetDialogFragment" />
+        android:label="OwnerStoreAddFragment" />
     <fragment
-        android:id="@+id/ownerReviewFragment"
-        android:name="com.example.hackathon.view.fragment.OwnerReviewFragment"
-        android:label="OwnerReviewFragment" >
-        <action
-            android:id="@+id/action_ownerReviewFragment_to_reviewBottomSheetDialogFragment"
-            app:destination="@id/reviewBottomSheetDialogFragment" />
-        <argument
-            android:name="data"
-            app:argType="com.example.hackathon.domain.entity.Review" />
-    </fragment>
+        android:id="@+id/clientDetailFragment"
+        android:name="com.example.hackathon.view.fragment.ClientDetailFragment"
+        android:label="ClientDetailFragment" />
+    <fragment
+        android:id="@+id/ownerDetailFragment"
+        android:name="com.example.hackathon.view.fragment.OwnerDetailFragment"
+        android:label="OwnerDetailFragment" />
+    <fragment
+        android:id="@+id/ownerOrderListFragment"
+        android:name="com.example.hackathon.view.fragment.OwnerOrderListFragment"
+        android:label="OwnerOrderListFragment" />
 
 
 </navigation>
