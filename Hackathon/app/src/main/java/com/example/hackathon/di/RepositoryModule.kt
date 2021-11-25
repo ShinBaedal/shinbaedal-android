@@ -24,6 +24,12 @@ object RepositoryModule {
     fun provideFileRepository(dataSource: FileDataSource): FileRepository {
         return FileRepositoryImpl(dataSource)
     }
+
+    @Provides
+    @Singleton
+    fun provideMenuRepository(dataSource: MenuDataSource): MenuRepository {
+        return MenuRepositoryImpl(dataSource)
+    }
     @Provides
     @Singleton
     fun provideOwnerStoreRepository(dataSource: OwnerStoreDataStore): OwnerStoreRepository {
