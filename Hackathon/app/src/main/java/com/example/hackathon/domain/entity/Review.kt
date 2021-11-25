@@ -1,5 +1,9 @@
 package com.example.hackathon.domain.entity
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Review(
     val id: Long,
     val menuNames: List<String>,
@@ -9,4 +13,4 @@ data class Review(
     val storeName: String,
     val rate: Double,
     val reply: List<Reply>
-)
+) : Parcelable

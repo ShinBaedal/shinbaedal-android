@@ -15,7 +15,9 @@ import com.example.hackathon.R
 import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.databinding.ClientDetailFragmentBinding
 import com.example.hackathon.viewmodel.ClientDetailViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ClientDetailFragment :
     BaseFragment<ClientDetailFragmentBinding>(R.layout.client_detail_fragment) {
 

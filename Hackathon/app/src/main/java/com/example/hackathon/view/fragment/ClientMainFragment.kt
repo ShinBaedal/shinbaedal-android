@@ -17,6 +17,9 @@ import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 import com.example.hackathon.view.adapter.StoreHorizontalAdapter
 import com.example.hackathon.view.adapter.StoreVerticalAdapter
 import com.example.hackathon.viewmodel.ClientMainViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
     private val TAG = "ClientMainFragment"

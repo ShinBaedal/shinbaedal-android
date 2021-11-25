@@ -14,6 +14,9 @@ import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 import com.example.hackathon.view.adapter.ViewPagerAdapter
 import com.example.hackathon.viewmodel.OwnerDetailViewModel
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class OwnerDetailFragment :
     BaseFragment<OwnerDetailFragmentBinding>(R.layout.owner_detail_fragment),

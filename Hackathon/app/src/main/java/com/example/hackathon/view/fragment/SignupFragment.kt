@@ -13,6 +13,9 @@ import com.example.hackathon.data.pref.Pref
 import com.example.hackathon.databinding.SignupFragmentBinding
 import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.viewmodel.SignupViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class SignupFragment : Fragment() {
 

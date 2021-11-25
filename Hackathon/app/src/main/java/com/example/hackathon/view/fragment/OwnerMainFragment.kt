@@ -14,6 +14,9 @@ import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.base.toMultipartBody
 import com.example.hackathon.databinding.OwnerMainFragmentBinding
 import com.example.hackathon.viewmodel.OwnerMainViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_main_fragment) {
 
