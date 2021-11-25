@@ -13,7 +13,9 @@ import com.example.hackathon.data.pref.Pref
 import com.example.hackathon.databinding.ClientLoginFragmentBinding
 import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.viewmodel.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ClientLoginFragment : Fragment() {
     lateinit var binding: ClientLoginFragmentBinding
     private val viewModel: LoginViewModel by viewModels()

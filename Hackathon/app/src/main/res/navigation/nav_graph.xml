@@ -66,7 +66,12 @@
         android:id="@+id/ownerStoreAddBottomSheetDialog"
         tools:layout="@layout/owner_store_add_bottom_sheet_dialog"
         android:name="com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragment"
-        android:label="OwnerStoreAddBottomSheetDialog" />
+        android:label="OwnerStoreAddBottomSheetDialog" >
+
+        <action
+            android:id="@+id/action_ownerStoreAddBottomSheetDialog_to_ownerStoreAddFragment"
+            app:destination="@id/ownerStoreAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ownerStoreAddFragment"
         tools:layout="@layout/owner_store_add_fragment"
@@ -75,6 +80,21 @@
         <action
             android:id="@+id/action_ownerStoreAddFragment_to_ownerStoreAddBottomSheetDialog"
             app:destination="@id/ownerStoreAddBottomSheetDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/reviewBottomSheetDialogFragment"
+        android:name="com.example.hackathon.view.dialog.ReviewBottomSheetDialogFragment"
+        android:label="ReviewBottomSheetDialogFragment" />
+    <fragment
+        android:id="@+id/ownerReviewFragment"
+        android:name="com.example.hackathon.view.fragment.OwnerReviewFragment"
+        android:label="OwnerReviewFragment" >
+        <action
+            android:id="@+id/action_ownerReviewFragment_to_reviewBottomSheetDialogFragment"
+            app:destination="@id/reviewBottomSheetDialogFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.hackathon.domain.entity.Review" />
     </fragment>
 
 

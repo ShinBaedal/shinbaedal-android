@@ -4,6 +4,9 @@ import com.example.hackathon.R
 import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.databinding.OwnerStoreAddFragmentBinding
 import com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragment
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class OwnerStoreAddFragment :
     BaseFragment<OwnerStoreAddFragmentBinding>(R.layout.owner_store_add_fragment) {

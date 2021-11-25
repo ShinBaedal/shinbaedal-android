@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hackathon.R
 import com.example.hackathon.databinding.OwnerMainFragmentBinding
 import com.example.hackathon.databinding.OwnerMainItemBinding
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Store
 
 class OwnerMainAdapter : RecyclerView.Adapter<OwnerMainAdapter.OwnerMainViewHolder>() {
 
