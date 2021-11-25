@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
+        android:elevation="3dp"
         app:cardCornerRadius="15dp"
         android:id="@+id/cardView2"
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/img_photo_rv_item_owner_menu"
+            android:id="@+id/img_photo_rv_item_add_store"
             android:layout_width="70dp"
             android:layout_height="58dp"
             android:scaleType="center"
@@ -57,4 +57,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_price_rv_item_add_store"
         tools:layout_editor_absoluteX="10dp" />
+
+    <ImageButton
+        android:id="@+id/btn_delete_rv_item_add_store"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_cancel_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

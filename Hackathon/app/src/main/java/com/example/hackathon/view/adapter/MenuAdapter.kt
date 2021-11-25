@@ -15,8 +15,8 @@ class MenuAdapter(val onClickListener: RecyclerViewItemClickListener<com.example
     private var menuList = arrayListOf<Menu>()
 
     inner class MenuViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val tvName = view.findViewById<TextView>(R.id.tv_name_rv_item_owner_menu)
-        val tvPrice = view.findViewById<TextView>(R.id.tv_price_rv_item_owner_menu)
+        val tvName = view.findViewById<TextView>(R.id.tv_name_rv_item_add_store)
+        val tvPrice = view.findViewById<TextView>(R.id.tv_price_rv_item_add_store)
         val img = view.findViewById<ImageView>(R.id.img_photo_rv_item_owner_menu)
 
         fun bind(menu: Menu) {

@@ -11,7 +11,7 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/owner_store_add_fragment_xml_constraintlayout3_scene">
+        app:layoutDescription="@xml/owner_store_add_fragment_xml_constraintlayout3_scene3">
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -38,12 +38,13 @@
                 android:text="점포 이름" />
 
             <EditText
+                android:id="@+id/edt_store_name_add_store"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/owner_add_edit_background"
                 android:hint="이름 입력"
-                android:paddingStart="12dp" />
+                android:padding="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,12 +52,44 @@
                 android:layout_marginTop="16dp"
                 android:text="점포 위치" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
+            <EditText
+                android:id="@+id/edt_address_add_store"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/owner_add_edit_background"
-                android:hint="위치 입력" />
+                android:hint="위치 입력"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="카테고리" />
+
+            <EditText
+                android:id="@+id/edt_category_add_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/owner_add_edit_background"
+                android:hint="카테고리 입력"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="전화 번호" />
+
+            <EditText
+                android:id="@+id/edt_tell_add_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/owner_add_edit_background"
+                android:hint="전화 번호 입력"
+                android:padding="15dp" />
 
 
         </LinearLayout>
@@ -84,9 +117,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/owner_add_btn_background"
-                android:drawableStart="@drawable/owner_addpng"
-                android:paddingHorizontal="166dp"
+                android:background="@color/main"
+                android:text="메뉴 추가"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -129,12 +162,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:clickable="true"
-                    android:focusable="true"
                     android:id="@+id/btn_add_image_add_store"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/grey"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:scaleType="center"
                     android:src="@drawable/ic_add_black_24dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -190,13 +223,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add_menu_add_store"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/main"
                 android:padding="5dp"
                 android:text="추가하기"
                 android:textColor="@color/white"
-                android:id="@+id/btn_add_menu_add_store"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/edt_menu_price_add_store"
@@ -204,5 +237,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/edt_menu_price_add_store" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add_store_add_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/main"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="점포 추가"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>
