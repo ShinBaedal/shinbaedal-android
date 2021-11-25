@@ -8,79 +8,131 @@
     <fragment
         android:id="@+id/clientLoginFragment"
         android:name="com.example.hackathon.view.fragment.ClientLoginFragment"
-        android:label="ClientLoginFragment" >
+        android:label="ClientLoginFragment">
         <action
             android:id="@+id/action_clientLoginFragment_to_emailAuthFragment"
-            app:destination="@id/emailAuthFragment" />
+            app:destination="@id/emailAuthFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_clientLoginFragment_to_ownerLoginFragment"
-            app:destination="@id/ownerLoginFragment" />
+            app:destination="@id/ownerLoginFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_clientLoginFragment_to_ownerMainFragment"
-            app:destination="@id/ownerMainFragment" />
+            app:destination="@id/ownerMainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_clientLoginFragment_to_clientMainFragment"
-            app:destination="@id/clientMainFragment" />
+            app:destination="@id/clientMainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
         android:name="com.example.hackathon.view.fragment.SignupFragment"
-        android:label="ClientSignupFragment" >
+        android:label="ClientSignupFragment">
         <action
             android:id="@+id/action_signupFragment_to_ownerMainFragment"
-            app:destination="@id/ownerMainFragment" />
+            app:destination="@id/ownerMainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_signupFragment_to_clientMainFragment"
-            app:destination="@id/clientMainFragment" />
+            app:destination="@id/clientMainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/emailAuthFragment"
         android:name="com.example.hackathon.view.fragment.EmailAuthFragment"
-        android:label="EmailAuthFragment" >
+        android:label="EmailAuthFragment">
         <action
             android:id="@+id/action_emailAuthFragment_to_clientSignupFragment"
-            app:destination="@id/signupFragment" />
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/ownerLoginFragment"
         android:name="com.example.hackathon.view.fragment.OwnerLoginFragment"
-        android:label="OwnerLoginFragment" >
+        android:label="OwnerLoginFragment">
         <action
             android:id="@+id/action_ownerLoginFragment_to_emailAuthFragment"
-            app:destination="@id/emailAuthFragment" />
+            app:destination="@id/emailAuthFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_ownerLoginFragment_to_ownerMainFragment"
-            app:destination="@id/ownerMainFragment" />
+            app:destination="@id/ownerMainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/ownerMainFragment"
         android:name="com.example.hackathon.view.fragment.OwnerMainFragment"
         android:label="owner_main_fragment"
-        tools:layout="@layout/owner_main_fragment" >
+        tools:layout="@layout/owner_main_fragment">
         <action
             android:id="@+id/action_ownerMainFragment_to_ownerDetailFragment"
-            app:destination="@id/ownerDetailFragment" />
+            app:destination="@id/ownerDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_ownerMainFragment_to_ownerOrderListFragment"
-            app:destination="@id/ownerOrderListFragment" />
+            app:destination="@id/ownerOrderListFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_ownerMainFragment_to_ownerStoreAddFragment"
-            app:destination="@id/ownerStoreAddFragment" />
+            app:destination="@id/ownerStoreAddFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/clientMainFragment"
         android:name="com.example.hackathon.view.fragment.ClientMainFragment"
         android:label="client_main_fragment"
-        tools:layout="@layout/client_main_fragment" >
+        tools:layout="@layout/client_main_fragment">
         <action
             android:id="@+id/action_clientMainFragment_to_clientDetailFragment"
-            app:destination="@id/clientDetailFragment" />
+            app:destination="@id/clientDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/ownerStoreAddFragment"
-        tools:layout="@layout/owner_store_add_fragment"
         android:name="com.example.hackathon.view.fragment.OwnerStoreAddFragment"
-        android:label="OwnerStoreAddFragment" />
+        android:label="OwnerStoreAddFragment"
+        tools:layout="@layout/owner_store_add_fragment" />
     <fragment
         android:id="@+id/clientDetailFragment"
         android:name="com.example.hackathon.view.fragment.ClientDetailFragment"
@@ -96,10 +148,14 @@
     <dialog
         android:id="@+id/ownerStoreAddBottomSheetFragment"
         android:name="com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragment"
-        android:label="OwnerStoreAddBottomSheetFragment" >
+        android:label="OwnerStoreAddBottomSheetFragment">
         <action
             android:id="@+id/action_ownerStoreAddBottomSheetFragment_to_ownerStoreAddFragment"
-            app:destination="@id/ownerStoreAddFragment" />
+            app:destination="@id/ownerStoreAddFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </dialog>
 
 
