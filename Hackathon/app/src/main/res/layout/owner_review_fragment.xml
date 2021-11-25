@@ -13,6 +13,8 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:textStyle="bold"
+            android:text="리뷰"
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +24,7 @@
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="리뷰 1234" />
+            />
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chip_type"
@@ -31,7 +33,7 @@
             app:checkedChip="@+id/positive_chip"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="5dp"
             app:selectionRequired="true"
             app:singleLine="true"
             app:singleSelection="true">

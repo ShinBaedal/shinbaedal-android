@@ -12,7 +12,7 @@ class ViewPagerAdapter(
     private val onClick: RecyclerViewItemClickListener<Menu>
 ) : FragmentStateAdapter(activity) {
 
-    override fun getItemCount(): Int = 100
+    override fun getItemCount(): Int = 2
 
     override fun createFragment(position: Int): Fragment {
 

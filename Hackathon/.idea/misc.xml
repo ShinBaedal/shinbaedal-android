@@ -50,10 +50,13 @@
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.41354166666666664" />
         <entry key="app/src/main/res/layout/order_rv_item.xml" value="0.2692975507342076" />
         <entry key="app/src/main/res/layout/owne_list_item.xml" value="0.2101851851851852" />
+        <entry key="app/src/main/res/layout/owner_detail_fragment.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/owner_login_fragment.xml" value="0.2674023694530384" />
         <entry key="app/src/main/res/layout/owner_main_fragment.xml" value="0.2770605759682224" />
         <entry key="app/src/main/res/layout/owner_main_item.xml" value="0.26445497630331755" />
+        <entry key="app/src/main/res/layout/owner_menu_fragment.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/owner_order_list_fragment.xml" value="0.20972222222222223" />
+        <entry key="app/src/main/res/layout/owner_review_fragment.xml" value="0.20972222222222223" />
         <entry key="app/src/main/res/layout/signup_fragment.xml" value="0.2598878312192168" />
       </map>
     </option>

@@ -35,9 +35,12 @@ class OwnerDetailFragment :
         viewPagerOwnerDetail.apply {
             adapter = ViewPagerAdapter(requireActivity(), this@OwnerDetailFragment)
         }
-//        TabLayoutMediator(tabOwnerDetail, viewPagerOwnerDetail) { tab, position ->
-//            tab.text = tabNames[position]
-//        }.attach()
+        for (tab in tabNames) {
+            tabOwnerDetail.addTab(tabOwnerDetail.newTab().apply { text = tab })
+        }
+        TabLayoutMediator(tabOwnerDetail, viewPagerOwnerDetail) { tab, position ->
+            tab.text = tabNames[position]
+        }.attach()
         btnBackOwnerDetail.setOnClickListener {
             findNavController().navigateUp()
         }
@@ -65,7 +68,7 @@ class OwnerDetailFragment :
     }
 
     override fun onclick(data: Menu) {
-        binding.menu=data
+        binding.menu = data
         binding.constraintLayout4.transitionToEnd()
     }
 }
