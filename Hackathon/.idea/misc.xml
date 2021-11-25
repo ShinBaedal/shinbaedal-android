@@ -47,7 +47,8 @@
         <entry key="app/src/main/res/layout/client_signup_fragment.xml" value="0.23639544167814247" />
         <entry key="app/src/main/res/layout/email_auth_fragment.xml" value="0.17350591046789876" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.41354166666666664" />
-        <entry key="app/src/main/res/layout/owner_login_fragment.xml" value="0.3340742964965093" />
+        <entry key="app/src/main/res/layout/order_rv_item.xml" value="0.2692975507342076" />
+        <entry key="app/src/main/res/layout/owner_login_fragment.xml" value="0.2674023694530384" />
         <entry key="app/src/main/res/layout/owner_main_fragment.xml" value="0.3675925925925926" />
         <entry key="app/src/main/res/layout/signup_fragment.xml" value="0.2598878312192168" />
       </map>
