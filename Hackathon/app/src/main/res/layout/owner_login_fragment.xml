@@ -101,7 +101,8 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" < 손님으로"
+            android:text="손님으로"
+            android:drawableLeft="@drawable/ic_baseline_keyboard_arrow_left_24"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/container_owner_login"
             app:layout_constraintTop_toBottomOf="@+id/container_owner_login" />
