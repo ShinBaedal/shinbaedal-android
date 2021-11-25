@@ -11,7 +11,7 @@ interface OrderApi {
     suspend fun postOrder(@Body body: PostOrderRequest) : BaseResponse
 
     @GET("order/my")
-    suspend fun getOrders(@Path("order_id")orderId:Long):DataResponse<List<Order>>
+    suspend fun getOrders():DataResponse<List<Order>>
 
     @PATCH("order/{order_id}")
     suspend fun patchOrder(@Path("order_id")orderId:Long):BaseResponse
