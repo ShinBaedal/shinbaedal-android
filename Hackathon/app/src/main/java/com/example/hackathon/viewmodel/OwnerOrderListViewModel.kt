@@ -1,5 +1,6 @@
 package com.example.hackathon.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -21,6 +22,7 @@ class OwnerOrderListViewModel @Inject constructor(private val orderRepository: O
         orderState.postValue(DataState.Loading)
         job = viewModelScope.launch {
             orderRepository.getOrders().collect {
+                Log.d("TAG", "getOrders: ${it.message}")
                 orderState.postValue(DataState.Success(it.data))
             }
         }

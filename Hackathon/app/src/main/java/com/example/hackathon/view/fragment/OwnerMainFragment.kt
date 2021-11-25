@@ -42,6 +42,7 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
         observe()
         getData()
         bind()
+        addStoreOnClick()
     }
 
     private fun bind() = with(binding){
@@ -78,6 +79,12 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
         findNavController().navigate(R.id.action_ownerMainFragment_to_ownerDetailFragment, bundle)
     }
 
+
+    private fun addStoreOnClick(){
+        binding.addStoreLayout.setOnClickListener {
+           findNavController().navigate(R.id.action_ownerMainFragment_to_ownerStoreAddFragment)
+        }
+    }
 
 }
 

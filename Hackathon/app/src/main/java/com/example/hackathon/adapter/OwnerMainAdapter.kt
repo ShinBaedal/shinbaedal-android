@@ -2,12 +2,10 @@ package com.example.hackathon.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hackathon.R
-import com.example.hackathon.databinding.OwnerMainFragmentBinding
 import com.example.hackathon.databinding.OwnerMainItemBinding
 import com.example.hackathon.domain.entity.Store
 import com.example.hackathon.view.adapter.RecyclerViewItemClickListener

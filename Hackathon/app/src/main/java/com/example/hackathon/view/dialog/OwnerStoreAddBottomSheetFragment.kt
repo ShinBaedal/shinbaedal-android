@@ -35,4 +35,5 @@ class OwnerStoreAddBottomSheetFragment :
         !(TextUtils.isEmpty(binding.menuNameTxt.toString())) && !(TextUtils.isEmpty(binding.menuPriceTxt.toString()))
 
 
+
 }

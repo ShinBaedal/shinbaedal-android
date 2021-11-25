@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class OrderDataSource @Inject constructor(val orderApi: OrderApi) {
     suspend fun getOrders() =
-        flow<DataResponse<List<Order>>> { emit(orderApi.getOrders()) }
+        flow { emit(orderApi.getOrders()) }
 
     suspend fun doOrder(orderId: Long) = orderApi.patchOrder(orderId)
 

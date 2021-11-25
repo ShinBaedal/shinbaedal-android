@@ -34,6 +34,7 @@
                 android:layout_height="74dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/ic_launcher_background"
+                app:imageUrl="@{data.photoUrl}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -52,23 +53,41 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@{data.name}"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     tools:text="롯데리아 신성점" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="12sp"
-                    tools:text="햄버거/010-0000-0000" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{data.category}"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        tools:text="햄버거" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{data.tell}"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        tools:text="010-0000-0000" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:drawablePadding="4dp"
+                    android:text="@{data.address}"
                     android:textColor="@color/dark_grey"
                     android:textSize="12sp"
                     app:drawableStartCompat="@drawable/owner_main_iconmonstr_location"
@@ -83,6 +102,7 @@
 
                 android:layout_marginEnd="12dp"
                 android:drawablePadding="4dp"
+                app:rating="@{data.rate}"
                 android:textColor="#05D686"
                 app:drawableLeftCompat="@drawable/owner_main_star"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout"

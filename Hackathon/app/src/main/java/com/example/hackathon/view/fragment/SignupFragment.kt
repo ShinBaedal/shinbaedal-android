@@ -1,6 +1,7 @@
 package com.example.hackathon.view.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -94,6 +95,7 @@ class SignupFragment : Fragment() {
         viewModel.ownerSignupState.observe(viewLifecycleOwner) {
             when (it) {
                 is DataState.Success -> {
+                    Log.d("TAG", "observe: 성공 ")
                     Pref.token = it.data.token
                     Pref.isOwner = true
                     findNavController().navigate(R.id.action_signupFragment_to_ownerMainFragment)

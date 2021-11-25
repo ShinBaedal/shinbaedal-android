@@ -30,7 +30,7 @@ class OwnerOrderListFragment :
         super.onViewCreated(view, savedInstanceState)
         bind()
         observe()
-        viewModel.getOrders()
+        //viewModel.getOrders()
     }
 
     private fun bind() = with(binding) {
