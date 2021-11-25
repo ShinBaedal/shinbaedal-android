@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class OwnerOrderListViewModel @Inject constructor(val orderRepository: OrderRepository) :
+class OwnerOrderListViewModel @Inject constructor(private val orderRepository: OrderRepository) :
     BaseViewModel() {
     val orderState = MutableLiveData<DataState<List<Order>>>()
 

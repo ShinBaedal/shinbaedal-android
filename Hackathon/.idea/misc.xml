@@ -44,14 +44,16 @@
         <entry key="app/src/main/res/drawable/card_rectangle.xml" value="0.26296296296296295" />
         <entry key="app/src/main/res/drawable/ic_baseline_reorder_24.xml" value="0.3055555555555556" />
         <entry key="app/src/main/res/layout/client_login_fragment.xml" value="0.18324728617437086" />
-        <entry key="app/src/main/res/layout/client_main_fragment.xml" value="0.39895833333333336" />
+        <entry key="app/src/main/res/layout/client_main_fragment.xml" value="0.21474265291551717" />
         <entry key="app/src/main/res/layout/client_signup_fragment.xml" value="0.23639544167814247" />
         <entry key="app/src/main/res/layout/email_auth_fragment.xml" value="0.17350591046789876" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.41354166666666664" />
         <entry key="app/src/main/res/layout/order_rv_item.xml" value="0.2692975507342076" />
         <entry key="app/src/main/res/layout/owne_list_item.xml" value="0.2101851851851852" />
         <entry key="app/src/main/res/layout/owner_login_fragment.xml" value="0.2674023694530384" />
-        <entry key="app/src/main/res/layout/owner_main_fragment.xml" value="0.3675925925925926" />
+        <entry key="app/src/main/res/layout/owner_main_fragment.xml" value="0.2770605759682224" />
+        <entry key="app/src/main/res/layout/owner_main_item.xml" value="0.26445497630331755" />
+        <entry key="app/src/main/res/layout/owner_order_list_fragment.xml" value="0.20972222222222223" />
         <entry key="app/src/main/res/layout/signup_fragment.xml" value="0.2598878312192168" />
       </map>
     </option>

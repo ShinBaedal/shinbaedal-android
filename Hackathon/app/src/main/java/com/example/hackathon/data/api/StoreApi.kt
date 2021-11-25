@@ -9,10 +9,10 @@ import retrofit2.http.Query
 
 interface StoreApi {
     @GET("store/{store_id}")
-    fun getStore(@Path("store_id") id: Long): DataResponse<Store>
+    suspend fun getStore(@Path("store_id") id: Long): DataResponse<Store>
 
     @GET("store/list/{category}")
-    fun getStores(
+    suspend fun getStores(
         @Path("category") category: String, @Query("address") address: String
     ): DataResponse<List<Store>>
 

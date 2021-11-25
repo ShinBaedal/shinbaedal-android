@@ -17,7 +17,9 @@ import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.view.adapter.OrderAdapter
 import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 import com.example.hackathon.viewmodel.OwnerOrderListViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OwnerOrderListFragment :
     BaseFragment<OwnerOrderListFragmentBinding>(R.layout.owner_order_list_fragment),
     RecyclerViewItemClickListener<Order> {

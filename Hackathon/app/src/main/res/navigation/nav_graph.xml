@@ -117,6 +117,10 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            app:launchSingleTop="true"
+            android:id="@+id/action_ownerMainFragment_to_clientLoginFragment"
+            app:destination="@id/clientLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/clientMainFragment"
@@ -130,6 +134,9 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_clientMainFragment_to_clientLoginFragment"
+            app:destination="@id/clientLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/ownerStoreAddFragment"

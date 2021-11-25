@@ -35,9 +35,9 @@ class OwnerDetailFragment :
         viewPagerOwnerDetail.apply {
             adapter = ViewPagerAdapter(requireActivity(), this@OwnerDetailFragment)
         }
-        TabLayoutMediator(tabOwnerDetail, viewPagerOwnerDetail) { tab, position ->
-            tab.text = tabNames[position]
-        }.attach()
+//        TabLayoutMediator(tabOwnerDetail, viewPagerOwnerDetail) { tab, position ->
+//            tab.text = tabNames[position]
+//        }.attach()
         btnBackOwnerDetail.setOnClickListener {
             findNavController().navigateUp()
         }

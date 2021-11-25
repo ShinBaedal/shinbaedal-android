@@ -1,5 +1,6 @@
 package com.example.hackathon.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,6 +49,7 @@ class OwnerMainAdapter(val onClickListener: RecyclerViewItemClickListener<Store>
     }
 
     fun setList(list: List<Store>) {
+        Log.d("ownerAdapter",list.toString())
         ownerMainList.clear()
         ownerMainList.addAll(list)
         notifyDataSetChanged()

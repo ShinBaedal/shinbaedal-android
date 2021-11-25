@@ -67,7 +67,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="330dp"
                     android:background="@color/white"
                     android:padding="20dp">
 
@@ -83,10 +83,10 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{@string/hello_format(me.name)}"
+
                         android:textColor="@color/main"
                         android:textSize="26sp"
                         android:textStyle="bold"

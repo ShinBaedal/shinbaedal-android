@@ -5,8 +5,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import javax.inject.Inject
 
-@HiltViewModel
-open class BaseViewModel @Inject constructor() : ViewModel() {
+open class BaseViewModel : ViewModel() {
     protected var job: Job? = null
 
     override fun onCleared() {

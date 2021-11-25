@@ -35,7 +35,7 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
     lateinit var horizontalStoreAdapter: StoreHorizontalAdapter
     lateinit var verticalStoreAdapter: StoreVerticalAdapter
 
-    lateinit var me:Me
+    lateinit var me: Me
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -72,9 +72,10 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
                 }
             }
         }
-        viewModel.myInfoState.observe(requireActivity()){
-            binding.me=it
-            me=it
+        viewModel.myInfoState.observe(requireActivity()) {
+            me = it
+            binding.btnAddressClientMain.text = me.address
+            binding.tvName.text = me.name
         }
     }
 
@@ -92,18 +93,54 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
         binding.fabClientMain.setOnClickListener {
 
         }
-        binding.chipChickenClientMain.setOnCloseIconClickListener { viewModel.getStores("치킨",me.address) }
-        binding.chipChineseClientMain.setOnCloseIconClickListener { viewModel.getStores("중식",me.address) }
-        binding.chipHamburgerClientMain.setOnCloseIconClickListener { viewModel.getStores("햄버거",me.address) }
-        binding.chipJokboClientMain.setOnCloseIconClickListener { viewModel.getStores("족보",me.address) }
-        binding.chipJapaneseClientMain.setOnCloseIconClickListener { viewModel.getStores("일식",me.address) }
-        binding.chipPizzaClientMain.setOnCloseIconClickListener { viewModel.getStores("피자",me.address) }
-        binding.chipRiceClientMain.setOnCloseIconClickListener { viewModel.getStores("도시락",me.address) }
+        binding.chipChickenClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "치킨",
+                me.address
+            )
+        }
+        binding.chipChineseClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "중식",
+                me.address
+            )
+        }
+        binding.chipHamburgerClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "햄버거",
+                me.address
+            )
+        }
+        binding.chipJokboClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "족보",
+                me.address
+            )
+        }
+        binding.chipJapaneseClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "일식",
+                me.address
+            )
+        }
+        binding.chipPizzaClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "피자",
+                me.address
+            )
+        }
+        binding.chipRiceClientMain.setOnCloseIconClickListener {
+            viewModel.getStores(
+                "도시락",
+                me.address
+            )
+        }
     }
 
     private fun logout() {
         Pref.token = null
-        findNavController().navigateUp()
+        findNavController().popBackStack(R.id.clientMainFragment, true)
+        findNavController().navigate(R.id.action_clientMainFragment_to_clientLoginFragment)
     }
 
     private fun patchAddress() {
@@ -133,12 +170,13 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
                 }
                 p0?.dismiss()
                 viewModel.patchAddress(value)
-                binding.btnAddressClientMain.text=value
+                binding.btnAddressClientMain.text = value
             }
         })
 
         // 취소 버튼 설정
-        ad.setNegativeButton("취소"
+        ad.setNegativeButton(
+            "취소"
         ) { p0, p1 -> p0?.dismiss() };
         ad.show();
 

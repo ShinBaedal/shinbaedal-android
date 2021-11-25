@@ -39,7 +39,7 @@ class OwnerLoginFragment : Fragment() {
         val email = binding.edtEmailOwnerLogin.text.toString()
         val pw = binding.edtPwOwnerLogin.text.toString()
 
-        viewModel.loginClient(email, pw)
+        viewModel.loginOwner(email, pw)
     }
 
     private fun bind() {
@@ -47,7 +47,8 @@ class OwnerLoginFragment : Fragment() {
             login()
         }
         binding.btnToClientOwnerLogin.setOnClickListener {
-            findNavController().navigateUp()
+            findNavController().popBackStack(R.id.ownerMainFragment, true)
+            findNavController().navigate(R.id.action_ownerMainFragment_to_clientLoginFragment)
         }
         binding.btnToSignupOwnerLogin.setOnClickListener {
             findNavController().navigate(R.id.action_ownerLoginFragment_to_emailAuthFragment)

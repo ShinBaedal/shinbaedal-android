@@ -19,7 +19,7 @@ class AccountDataSource @Inject constructor(private val accountApi: AccountApi) 
     }
 
     fun ownerLogin(body: LoginRequest): Flow<DataResponse<AuthToken>> {
-        return flow { emit(accountApi.loginClient(body)) }.flowOn(Dispatchers.IO)
+        return flow { emit(accountApi.loginOwner(body)) }.flowOn(Dispatchers.IO)
     }
 
     fun clientSignup(

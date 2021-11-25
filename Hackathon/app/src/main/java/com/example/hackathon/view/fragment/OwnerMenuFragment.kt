@@ -13,7 +13,9 @@ import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.view.adapter.MenuAdapter
 import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 import com.example.hackathon.viewmodel.OwnerMenuViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OwnerMenuFragment(val onclick: RecyclerViewItemClickListener<Menu>) :
     BaseFragment<OwnerMenuFragmentBinding>(R.layout.owner_menu_fragment),
     RecyclerViewItemClickListener<com.example.hackathon.domain.entity.Menu> {

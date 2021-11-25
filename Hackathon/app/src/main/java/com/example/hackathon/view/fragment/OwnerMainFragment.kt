@@ -5,6 +5,7 @@ import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
@@ -28,9 +29,9 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
 
     private val viewModel: OwnerMainViewModel by viewModels()
 
-    private val ssb: SpannableStringBuilder by lazy {
-        SpannableStringBuilder("UserMain")
-    }
+//    private val ssb: SpannableStringBuilder by lazy {
+//        SpannableStringBuilder("UserMain")
+//    }
     private val ownerMainAdapter: OwnerMainAdapter by lazy {
         OwnerMainAdapter(this)
     }
@@ -40,16 +41,12 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
         setAdapter()
         observe()
         getData()
+        bind()
     }
 
-    override fun OwnerMainFragmentBinding.onCreateView() {
-        ssb.apply {
-            setSpan(
-                ForegroundColorSpan(Color.BLACK),
-                0,
-                3,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
+    private fun bind() = with(binding){
+        fabOwnerMain.setOnClickListener {
+            findNavController().navigate(R.id.action_ownerMainFragment_to_ownerOrderListFragment)
         }
     }
 
@@ -66,6 +63,7 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
     private fun observe() = with(viewModel) {
         storesState.observe(viewLifecycleOwner) {
             if (it is DataState.Success) {
+                Log.d("ownermain",it.data.toString())
                 ownerMainAdapter.setList(it.data)
             }
         }
