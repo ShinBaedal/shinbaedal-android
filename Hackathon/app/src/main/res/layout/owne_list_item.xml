@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="16dp"
+android:background="@drawable/order_list_background"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/store_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="대전 신성점" />
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/store_txt"
+        app:layout_constraintLeft_toLeftOf="@id/store_txt"
+        android:layout_marginTop="10dp"
+        android:id="@+id/menu_text_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="피자 - 8000원" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/menu_text_one"
+        app:layout_constraintLeft_toLeftOf="@id/menu_text_one"
+        android:layout_marginTop="10dp"
+        android:id="@+id/menu_text_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="짜장면 - 8000원" />
+
+    <TextView
+
+        android:id="@+id/menu_text_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/menu_text_two"
+        app:layout_constraintTop_toBottomOf="@id/menu_text_two"
+        tools:text="햄버거 - 10,000원" />
+
+
+    <TextView
+        android:id="@+id/order_wait_txt"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="주문 대기" />
+
+
+    <ImageView
+        android:id="@+id/right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:src="@drawable/right_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
