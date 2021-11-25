@@ -95,7 +95,7 @@
                         tools:text="이형진님!" />
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/tv_name_owner_menu_item"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/recommend"
@@ -115,7 +115,7 @@
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name_owner_menu_item" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_recommend_client_main"
