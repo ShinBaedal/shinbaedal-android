@@ -9,5 +9,5 @@ import javax.inject.Inject
 
 class FileDataSource @Inject constructor(private val fileApi: FileApi) {
     suspend fun uploadPhoto(part: MultipartBody.Part) =
-        flow<DataResponse<PhotoUrl>> { emit(fileApi.uploadPhoto(part)) }
+        flow { emit(fileApi.uploadPhoto(part)) }
 }

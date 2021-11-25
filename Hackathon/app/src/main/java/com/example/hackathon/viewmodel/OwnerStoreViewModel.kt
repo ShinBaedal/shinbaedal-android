@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
+import java.io.File
 import javax.inject.Inject
 
 @HiltViewModel
@@ -48,7 +49,7 @@ class OwnerStoreViewModel @Inject constructor(
     }
 
     fun postFile(
-        uri: Uri
+        uri: File
     ) {
         fileUploadState.postValue(DataState.Loading)
         job = viewModelScope.launch {

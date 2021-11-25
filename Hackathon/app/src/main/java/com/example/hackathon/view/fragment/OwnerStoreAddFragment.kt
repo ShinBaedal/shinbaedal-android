@@ -1,9 +1,18 @@
 package com.example.hackathon.view.fragment
 
+import android.Manifest
+import android.annotation.SuppressLint
+import android.app.Activity.RESULT_OK
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.database.Cursor
 import android.net.Uri
+import android.provider.MediaStore
+import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
@@ -12,10 +21,12 @@ import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.databinding.OwnerStoreAddFragmentBinding
 import com.example.hackathon.domain.request.MenuRequest
 import com.example.hackathon.domain.response.DataState
+import com.example.hackathon.view.MainActivity
 import com.example.hackathon.view.adapter.AddStoreMenuAdapter
 import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 import com.example.hackathon.viewmodel.OwnerStoreViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import java.io.File
 
 @AndroidEntryPoint
 class OwnerStoreAddFragment :
@@ -25,15 +36,30 @@ class OwnerStoreAddFragment :
     private val viewModel: OwnerStoreViewModel by viewModels()
     val menuList = arrayListOf<MenuRequest>()
     lateinit var currentPhoto: String
-    private lateinit var getResult: ActivityResultLauncher<String>
+    private lateinit var getResult: ActivityResultLauncher<Intent>
     lateinit var menuAdapter: AddStoreMenuAdapter
     override fun OwnerStoreAddFragmentBinding.onCreateView() {
 
     }
 
     override fun OwnerStoreAddFragmentBinding.onViewCreated() {
-        getResult = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-            uri?.let { viewModel.postFile(it) }
+
+        getResult = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+
+            try {
+                if (result.resultCode == RESULT_OK) {
+                    File(getPathFromUri(result?.data?.data))
+                        .let { viewModel.postFile(it) }
+
+
+
+                    binding.btnAddImageAddStore.setImageURI(result.data?.data)
+                }
+            } catch (e: Exception) {
+                Log.d("TAG", "onCreateView: ${e}")
+            }
         }
         init()
         bind()
@@ -55,6 +81,17 @@ class OwnerStoreAddFragment :
         }
     }
 
+    @SuppressLint("Range")
+    fun getPathFromUri(uri: Uri?): String? {
+        val cursor: Cursor? =
+            (activity as MainActivity).contentResolver.query(uri!!, null, null, null, null)
+        cursor?.moveToNext()
+        val path: String? = cursor?.getString(cursor.getColumnIndex("_data"))
+        cursor?.close()
+        Log.d("getPathFromUri", "getPathFromUri: ${path} ")
+        return path
+    }
+
     private fun init() {
         menuAdapter = AddStoreMenuAdapter(menuList, this)
     }
@@ -65,7 +102,35 @@ class OwnerStoreAddFragment :
             constraintLayout3.transitionToEnd()
         }
         binding.btnAddImageAddStore.setOnClickListener {
-            getResult.launch("image/* ")
+            var writePermission =
+                ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                )
+            var readPermission = ContextCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            )
+            if (writePermission == PackageManager.PERMISSION_DENIED || readPermission == PackageManager.PERMISSION_DENIED) { // 권한 없어서 요청 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE), REQ_STORAGE_PERMISSION) }
+
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                    ),
+                    1000
+                )
+
+
+            }else{
+                val intent = Intent(Intent.ACTION_PICK)
+                intent.type = MediaStore.Images.Media.CONTENT_TYPE
+
+                getResult.launch(intent)
+            }
+
+
         }
         binding.btnAddMenuAddStore.setOnClickListener {
             val price = binding.edtMenuPriceAddStore.text.toString().toLong() //메뉴 가격
