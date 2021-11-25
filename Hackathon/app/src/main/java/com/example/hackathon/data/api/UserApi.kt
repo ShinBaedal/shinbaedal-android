@@ -2,7 +2,7 @@ package com.example.hackathon.data.api
 
 import com.example.hackathon.domain.response.BaseResponse
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.Me
+import com.example.hackathon.domain.entity.Me
 import retrofit2.http.GET
 import retrofit2.http.PATCH
 

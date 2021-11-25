@@ -9,11 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.hackathon.data.pref.Pref
 import com.example.hackathon.databinding.ClientMainFragmentBinding
 import com.example.hackathon.domain.response.DataState
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Store
 import com.example.hackathon.view.adapter.RecyclerViewItemClickListener
 import com.example.hackathon.view.adapter.StoreHorizontalAdapter
 import com.example.hackathon.view.adapter.StoreVerticalAdapter

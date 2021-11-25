@@ -1,10 +1,9 @@
 package com.example.hackathon.data.api
 
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Store
 import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface StoreApi {
