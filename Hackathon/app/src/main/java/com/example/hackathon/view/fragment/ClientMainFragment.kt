@@ -91,7 +91,7 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
             layoutManager = LinearLayoutManager(requireContext())
         }
         binding.fabClientMain.setOnClickListener {
-
+            findNavController().navigate(R.id.action_clientMainFragment_to_clientOrderListFragment)
         }
         binding.chipChickenClientMain.setOnCloseIconClickListener {
             viewModel.getStores(
@@ -139,8 +139,8 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
 
     private fun logout() {
         Pref.token = null
-        findNavController().popBackStack(R.id.clientMainFragment, true)
         findNavController().navigateUp()
+        findNavController().popBackStack()
     }
 
     private fun patchAddress() {
@@ -182,10 +182,6 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewModelStore.clear()
-    }
 
 
     override fun onclick(data: Store) {
