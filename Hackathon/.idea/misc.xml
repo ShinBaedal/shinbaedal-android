@@ -5,7 +5,6 @@
       <map>
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.46822916666666664" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/drawable/card_rectangle.xml" value="0.46822916666666664" />
-        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/drawable/ic_add_black_24dp.xml" value="0.46822916666666664" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml" value="0.46822916666666664" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/drawable/ic_baseline_location_on_18.xml" value="0.46822916666666664" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.46822916666666664" />
@@ -28,16 +27,15 @@
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owenr_review_bottom_sheet_dialog.xml" value="0.176" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_detail_fragment.xml" value="0.2" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_login_fragment.xml" value="0.264" />
-        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_main_fragment.xml" value="0.43353605560382275" />
-        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_main_item.xml" value="0.4" />
+        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_main_fragment.xml" value="0.128" />
+        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_main_item.xml" value="0.1691995947315096" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_menu_fragment.xml" value="0.12639311043566362" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_menu_item.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_mission_list_item.xml" value="0.45208333333333334" />
-        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_order_list_fragment.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_review_fragment.xml" value="0.2198581560283688" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_review_item.xml" value="0.2198581560283688" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_store_add_bottom_sheet_dialog.xml" value="0.34791666666666665" />
-        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_store_add_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/owner_store_add_fragment.xml" value="0.1691995947315096" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/rv_item_store_horizontal.xml" value="0.45208333333333334" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/rv_item_store_vertical.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/KyungMin/StudioProjects/shinbaedal-android/Hackathon/app/src/main/res/layout/signup_fragment.xml" value="0.264" />
@@ -46,20 +44,22 @@
         <entry key="app/src/main/res/drawable/card_rectangle.xml" value="0.26296296296296295" />
         <entry key="app/src/main/res/drawable/ic_baseline_reorder_24.xml" value="0.3055555555555556" />
         <entry key="app/src/main/res/layout/client_login_fragment.xml" value="0.18324728617437086" />
-        <entry key="app/src/main/res/layout/client_main_fragment.xml" value="0.39895833333333336" />
+        <entry key="app/src/main/res/layout/client_main_fragment.xml" value="0.21474265291551717" />
         <entry key="app/src/main/res/layout/client_signup_fragment.xml" value="0.23639544167814247" />
         <entry key="app/src/main/res/layout/email_auth_fragment.xml" value="0.17350591046789876" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.41354166666666664" />
-        <entry key="app/src/main/res/layout/owner_login_fragment.xml" value="0.3340742964965093" />
-        <entry key="app/src/main/res/layout/owner_main_fragment.xml" value="0.3675925925925926" />
+        <entry key="app/src/main/res/layout/order_rv_item.xml" value="0.2692975507342076" />
+        <entry key="app/src/main/res/layout/owne_list_item.xml" value="0.2101851851851852" />
+        <entry key="app/src/main/res/layout/owner_detail_fragment.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/owner_login_fragment.xml" value="0.2674023694530384" />
+        <entry key="app/src/main/res/layout/owner_main_fragment.xml" value="0.2770605759682224" />
+        <entry key="app/src/main/res/layout/owner_main_item.xml" value="0.26445497630331755" />
+        <entry key="app/src/main/res/layout/owner_menu_fragment.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/owner_order_list_fragment.xml" value="0.20972222222222223" />
+        <entry key="app/src/main/res/layout/owner_review_fragment.xml" value="0.20972222222222223" />
         <entry key="app/src/main/res/layout/signup_fragment.xml" value="0.2598878312192168" />
       </map>
     </option>
-  </component>
-  <component name="EntryPointsManager">
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="androidx.databinding.BindingAdapter" />
-    </list>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

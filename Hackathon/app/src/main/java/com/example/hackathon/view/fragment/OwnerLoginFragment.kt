@@ -48,8 +48,7 @@ class OwnerLoginFragment : Fragment() {
             login()
         }
         binding.btnToClientOwnerLogin.setOnClickListener {
-            findNavController().popBackStack(R.id.ownerMainFragment, true)
-            findNavController().navigate(R.id.action_ownerMainFragment_to_clientLoginFragment)
+            findNavController().navigateUp()
         }
         binding.btnToSignupOwnerLogin.setOnClickListener {
             findNavController().navigate(R.id.action_ownerLoginFragment_to_emailAuthFragment)
@@ -63,7 +62,8 @@ class OwnerLoginFragment : Fragment() {
                     Log.d("TAG", "observe: 성공")
                     Pref.token = it.data.token
                     Pref.isOwner = true
-
+                    viewModelStore.clear()
+                    findNavController().popBackStack(R.id.ownerLoginFragment, true)
                     navigateToOwnerMain()
                 }
                 is DataState.Failure -> {

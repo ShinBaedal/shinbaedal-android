@@ -140,7 +140,7 @@ class ClientMainFragment : Fragment(), RecyclerViewItemClickListener<Store> {
     private fun logout() {
         Pref.token = null
         findNavController().popBackStack(R.id.clientMainFragment, true)
-        findNavController().navigate(R.id.action_clientMainFragment_to_clientLoginFragment)
+        findNavController().navigateUp()
     }
 
     private fun patchAddress() {

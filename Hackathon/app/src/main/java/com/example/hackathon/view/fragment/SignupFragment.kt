@@ -47,6 +47,7 @@ class SignupFragment : Fragment() {
             }
         }
         binding.btnToLoginSignup.setOnClickListener {
+            findNavController().popBackStack(R.id.signupFragment, true)
             findNavController().navigate(R.id.action_signupFragment_to_clientLoginFragment)
         }
     }
