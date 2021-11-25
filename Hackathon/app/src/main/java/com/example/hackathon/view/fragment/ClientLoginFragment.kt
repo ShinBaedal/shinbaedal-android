@@ -71,7 +71,6 @@ class ClientLoginFragment : Fragment() {
                     Pref.isOwner = false
 
                     viewModelStore.clear()
-                    findNavController().popBackStack(R.id.clientLoginFragment, true)
                     navigateToClientMain()
                 }
                 is DataState.Failure -> {

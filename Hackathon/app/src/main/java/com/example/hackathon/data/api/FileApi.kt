@@ -11,7 +11,7 @@ interface FileApi {
     @Multipart
     @POST("photo")
     suspend fun uploadPhoto(
-        @Part photo: MultipartBody.Part
+        @Part file: MultipartBody.Part
     ):DataResponse<PhotoUrl>
 
 

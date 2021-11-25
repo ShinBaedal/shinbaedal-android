@@ -135,8 +135,9 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
-            android:id="@+id/action_clientMainFragment_to_clientLoginFragment"
-            app:destination="@id/clientLoginFragment" />
+            android:id="@+id/action_clientMainFragment_to_clientOrderListFragment"
+            app:destination="@id/clientOrderListFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/ownerStoreAddFragment"
@@ -167,6 +168,10 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </dialog>
+    <fragment
+        android:id="@+id/clientOrderListFragment"
+        android:name="com.example.hackathon.view.fragment.ClientOrderListFragment"
+        android:label="ClientOrderListFragment" />
 
 
 </navigation>

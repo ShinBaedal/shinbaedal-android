@@ -7,9 +7,7 @@ import okhttp3.RequestBody
 import java.io.File
 
 fun Uri.toFile(): File {
-    val path: File = Environment.getExternalStoragePublicDirectory(
-        Environment.DIRECTORY_PICTURES
-    )
+    val path = this.path
     return File(path, "DemoPicture.jpg")
 
 }
@@ -17,7 +15,7 @@ fun Uri.toFile(): File {
 fun Uri.toMultipartBody(): MultipartBody.Part = MultipartBody.Part.createFormData(
     "name",
     "fileName",
-    RequestBody.create("image/*".medi, this.toFile())
+//    RequestBody.create("image/*", this.toFile())
 )
 
 
