@@ -26,5 +26,11 @@ class OwnerOrderListViewModel @Inject constructor(val orderRepository: OrderRepo
         }
     }
 
+    fun doOrder(orderId: Long) {
+        job = viewModelScope.launch {
+            orderRepository.doOrder(orderId)
+        }
+    }
+
 
 }
