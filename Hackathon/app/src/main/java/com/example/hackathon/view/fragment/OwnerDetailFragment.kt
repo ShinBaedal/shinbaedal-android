@@ -11,16 +11,19 @@ import android.widget.Toast
 import androidx.core.view.get
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.viewpager2.widget.ViewPager2
 import com.example.hackathon.R
 import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.databinding.OwnerDetailFragmentBinding
 import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.view.adapter.ViewPagerAdapter
 import com.example.hackathon.viewmodel.OwnerDetailViewModel
+import com.google.android.material.tabs.TabLayoutMediator
 
 class OwnerDetailFragment :
     BaseFragment<OwnerDetailFragmentBinding>(R.layout.owner_detail_fragment) {
     private val viewModel: OwnerDetailViewModel by viewModels()
+    private val tabNames = listOf<String>("메뉴", "리뷰")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -31,13 +34,12 @@ class OwnerDetailFragment :
     }
 
     fun bind() = with(binding) {
-        tabOwnerDetail.apply {
-            getTabAt(0)?.text="메뉴"
-            getTabAt(1)?.text="리뷰"
-        }
         viewPagerOwnerDetail.apply {
-//            adapter=ViewPagerAdapter()
+            adapter = ViewPagerAdapter(requireActivity())
         }
+        TabLayoutMediator(tabOwnerDetail, viewPagerOwnerDetail) { tab, position ->
+            tab.text = tabNames[position]
+        }.attach()
         btnBackOwnerDetail.setOnClickListener {
             findNavController().navigateUp()
         }
