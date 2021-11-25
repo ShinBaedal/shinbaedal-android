@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface MenuApi {
-    @GET("menus/{store_id}")
+    @GET("menu/list/{store_id}")
     suspend fun getMenus(@Path("store_id") storeId: Long): DataResponse<List<Menu>>
 }

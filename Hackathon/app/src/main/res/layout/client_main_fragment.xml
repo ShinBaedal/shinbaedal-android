@@ -10,7 +10,7 @@
             type="com.example.hackathon.domain.entity.Me" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -53,7 +53,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0"
             android:background="@color/grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -175,31 +175,59 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
-                            app:selectionRequired="true"
                             app:checkedChip="@id/chip_chinese_client_main"
+                            app:selectionRequired="true"
                             app:singleLine="true"
                             app:singleSelection="true">
 
                             <com.google.android.material.chip.Chip
-                                style="@style/CustomChipStyle"
                                 android:id="@+id/chip_chinese_client_main"
+                                style="@style/CustomChipStyle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="중식" />
 
                             <com.google.android.material.chip.Chip
-                                style="@style/CustomChipStyle"
                                 android:id="@+id/chip_chicken_client_main"
+                                style="@style/CustomChipStyle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="치킨" />
 
                             <com.google.android.material.chip.Chip
-                                style="@style/CustomChipStyle"
                                 android:id="@+id/chip_hamburger_client_main"
+                                style="@style/CustomChipStyle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="햄버거" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_japanese_client_main"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="일식" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_pizza_client_main"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="피자" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_rice_client_main"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="도시락" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_jokbo_client_main"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="족발,보쌈" />
                         </com.google.android.material.chip.ChipGroup>
                     </HorizontalScrollView>
 
@@ -218,6 +246,19 @@
             </LinearLayout>
         </ScrollView>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_client_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_reorder_24"
+            app:backgroundTint="@color/main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:tint="@color/white" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -9,23 +9,23 @@ import retrofit2.http.*
 
 //로그인 회원가입
 interface AccountApi {
-    @POST("login/owner")
+    @POST("auth/login/owner")
     suspend fun loginOwner(@Body body: LoginRequest): DataResponse<AuthToken>
 
-    @POST("login/client")
+    @POST("auth/login/client")
     suspend fun loginClient(@Body body: LoginRequest): DataResponse<AuthToken>
 
-    @POST("signup/owner")
+    @POST("auth/signup/owner")
     suspend fun signupOwner(@Body body: SignupRequest): DataResponse<AuthToken>
 
-    @POST("signup/client")
+    @POST("auth/signup/client")
     suspend fun signupClient(@Body body: SignupRequest): DataResponse<AuthToken>
 
 
-    @GET("email/{email}")
+    @GET("auth/email/{email}")
     suspend fun requestEmailAuth(@Query("email") email: String): BaseResponse
 
-    @POST("email")
+    @POST("auth/email")
     suspend fun checkCode(@Body code: Int): BaseResponse
 
 }

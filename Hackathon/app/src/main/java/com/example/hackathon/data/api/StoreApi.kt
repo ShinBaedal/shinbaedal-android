@@ -11,7 +11,7 @@ interface StoreApi {
     @GET("store/{store_id}")
     fun getStore(@Path("store_id") id: Long): DataResponse<Store>
 
-    @GET("stores/{category}")
+    @GET("store/list/{category}")
     fun getStores(
         @Path("category") category: String, @Query("address") address: String
     ): DataResponse<List<Store>>
