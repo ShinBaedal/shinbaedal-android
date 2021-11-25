@@ -13,6 +13,7 @@ import com.example.hackathon.adapter.OwnerMainAdapter
 import com.example.hackathon.base.BaseFragment
 import com.example.hackathon.base.toMultipartBody
 import com.example.hackathon.databinding.OwnerMainFragmentBinding
+import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.viewmodel.OwnerMainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -29,12 +30,11 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
         OwnerMainAdapter()
     }
 
-    fun getImage() = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        uri?.toMultipartBody()
-    }
 
     override fun OwnerMainFragmentBinding.onViewCreated() {
         setAdapter()
+        observe()
+        getData()
     }
 
     override fun OwnerMainFragmentBinding.onCreateView() {
@@ -58,8 +58,16 @@ class OwnerMainFragment : BaseFragment<OwnerMainFragmentBinding>(R.layout.owner_
         }
     }
 
+    private fun observe() = with(viewModel) {
+        storesState.observe(viewLifecycleOwner) {
+            if (it is DataState.Success) {
+                ownerMainAdapter.setList(it.data)
+            }
+        }
+    }
+
     private fun getData() {
-        // todo
+        viewModel.getStores()
     }
 
 

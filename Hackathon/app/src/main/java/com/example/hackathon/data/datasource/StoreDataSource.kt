@@ -10,6 +10,7 @@ class StoreDataSource @Inject constructor(private val storeApi: StoreApi) {
 
     suspend fun getStore(id: Long) = flow<DataResponse<Store>> { emit(storeApi.getStore(id)) }
 
-    suspend fun getStores(address: String) = flow<DataResponse<List<Store>>> { emit(storeApi.getStores(address)) }
+    suspend fun getStores(category: String, address: String) =
+        flow<DataResponse<List<Store>>> { emit(storeApi.getStores(category, address)) }
 
 }

@@ -39,6 +39,11 @@ class OwnerMainAdapter : RecyclerView.Adapter<OwnerMainAdapter.OwnerMainViewHold
 
         return OwnerMainViewHolder(binding)
     }
+    fun setList(list:List<Store>){
+        ownerMainList.clear()
+        ownerMainList.addAll(list)
+        notifyDataSetChanged()
+    }
 
 
     override fun onBindViewHolder(holder: OwnerMainViewHolder, position: Int) {
