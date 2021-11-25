@@ -22,6 +22,6 @@ interface ReviewApi {
         @Body content: String
     ): BaseResponse
 
-    @GET("reviews/{store_id}")
+    @GET("review/list/{store_id}")
     suspend fun getReviews(@Path("store_id") storeId: Int): DataResponse<List<Review>>
 }
