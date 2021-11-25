@@ -5,5 +5,6 @@
     <string name="neutrality">중립</string>
     <string name="denial">부정</string>
     <string name="hello_format">%s님!</string>
+    <string name="review_format">리뷰 %d개</string>
     <string name="recommend">드시고 싶은 게 없으신가요?</string>
 </resources>
