@@ -1,3 +1,3 @@
 package com.example.hackathon.domain.request
 
-data class SignupRequest(val email:String, val pw:String, val name:String)
+data class SignupRequest(val email:String, val password:String, val name:String)
