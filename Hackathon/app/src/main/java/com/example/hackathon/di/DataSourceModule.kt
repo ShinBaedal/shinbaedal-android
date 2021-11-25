@@ -27,8 +27,8 @@ object DataSourceModule {
 
     @Provides
     @Singleton
-    fun provideOwnerDataSource(authRemote: OwnerStoreApi): OwnerStoreDataStore {
-        return OwnerStoreDataStore(authRemote)
+    fun provideOwnerDataSource(authRemote: OwnerStoreApi): OwnerStoreDataSource {
+        return OwnerStoreDataSource(authRemote)
     }
 
     @Provides
