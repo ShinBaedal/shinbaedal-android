@@ -48,4 +48,10 @@ object DataSourceModule {
     fun provideUserDataSource(authRemote: UserApi): UserDataSource {
         return UserDataSource(authRemote)
     }
+
+    @Provides
+    @Singleton
+    fun provideOrderDataSource(authRemote: OrderApi): OrderDataSource {
+        return OrderDataSource(authRemote)
+    }
 }

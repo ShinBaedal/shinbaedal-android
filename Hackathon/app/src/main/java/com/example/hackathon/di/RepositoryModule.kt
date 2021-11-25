@@ -55,5 +55,11 @@ object RepositoryModule {
     fun provideUserRepository(dataSource: UserDataSource): UserRepository {
         return UserRepositoryImpl(dataSource)
     }
+    @Provides
+    @Singleton
+    fun provideOrderRepository(dataSource: OrderDataSource): OrderRepository {
+        return OrderRepositoryImpl(dataSource)
+    }
+
 
 }

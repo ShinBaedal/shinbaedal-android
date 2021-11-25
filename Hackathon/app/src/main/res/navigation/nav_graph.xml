@@ -93,6 +93,14 @@
         android:id="@+id/ownerOrderListFragment"
         android:name="com.example.hackathon.view.fragment.OwnerOrderListFragment"
         android:label="OwnerOrderListFragment" />
+    <dialog
+        android:id="@+id/ownerStoreAddBottomSheetFragment"
+        android:name="com.example.hackathon.view.dialog.OwnerStoreAddBottomSheetFragment"
+        android:label="OwnerStoreAddBottomSheetFragment" >
+        <action
+            android:id="@+id/action_ownerStoreAddBottomSheetFragment_to_ownerStoreAddFragment"
+            app:destination="@id/ownerStoreAddFragment" />
+    </dialog>
 
 
 </navigation>

@@ -24,7 +24,7 @@ class OwnerStoreAddBottomSheetFragment :
     private fun sendData() {
 
         if (textNullTest()) {
-            findNavController().navigate(R.id.action_ownerStoreAddBottomSheetDialog_to_ownerStoreAddFragment)
+            findNavController().navigate(R.id.action_ownerStoreAddBottomSheetFragment_to_ownerStoreAddFragment)
         } else {
             Toast.makeText(requireContext(), "빈칸을 채워주세요", Toast.LENGTH_SHORT).show()
         }
