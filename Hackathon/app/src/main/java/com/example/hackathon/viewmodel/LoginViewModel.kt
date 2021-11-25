@@ -26,7 +26,7 @@ class LoginViewModel @Inject constructor(private val loginRepository: LoginRepos
             loginState.postValue(DataState.Loading)
             loginRepository.loginClient(LoginRequest(email, pw))
                 .catch {
-                    loginState.postValue(DataState.Failure(500, "서버 연결에 실패했어요"))
+                    loginState.postValue(DataState.Failure(500, "로그인에 실패했어요"))
                     Log.d(TAG, it.message.toString())
                 }
                 .collect {
@@ -43,7 +43,7 @@ class LoginViewModel @Inject constructor(private val loginRepository: LoginRepos
             loginState.postValue(DataState.Loading)
             loginRepository.loginOwner(LoginRequest(email, pw))
                 .catch {
-                    loginState.postValue(DataState.Failure(500, "서버 연결에 실패했어요"))
+                    loginState.postValue(DataState.Failure(500, "로그인에 실패했어요"))
                     Log.d(TAG, it.message.toString())
                 }
                 .collect {
