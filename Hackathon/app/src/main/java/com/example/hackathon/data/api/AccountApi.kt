@@ -1,5 +1,6 @@
 package com.example.hackathon.data.api
 
+import com.example.hackathon.domain.request.EmailAuthRequest
 import com.example.hackathon.domain.request.LoginRequest
 import com.example.hackathon.domain.request.SignupRequest
 import com.example.hackathon.domain.response.BaseResponse
@@ -22,10 +23,10 @@ interface AccountApi {
     suspend fun signupClient(@Body body: SignupRequest): DataResponse<AuthToken>
 
 
-    @GET("auth/email/{email}")
+    @GET("auth/email")
     suspend fun requestEmailAuth(@Query("email") email: String): BaseResponse
 
     @POST("auth/email")
-    suspend fun checkCode(@Body code: Int): BaseResponse
+    suspend fun checkCode(@Body body: EmailAuthRequest): BaseResponse
 
 }

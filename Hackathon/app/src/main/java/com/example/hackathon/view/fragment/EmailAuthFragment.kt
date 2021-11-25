@@ -46,8 +46,10 @@ class EmailAuthFragment : Fragment() {
 
     private fun bind() {
         binding.btnNextEmailAuth.setOnClickListener {
-            val code = binding.edtAuthCodeEmailAuth.text.toString().toInt()
-            viewModel.checkCode(code)
+            val code = binding.edtAuthCodeEmailAuth.text.toString()
+            val email: String = binding.edtEmailEmailAuth.text.toString()
+
+            viewModel.checkCode(email,code)
         }
         binding.btnRequestAuthEmailAuth.setOnClickListener {
             if (checkInput()) {
@@ -57,6 +59,7 @@ class EmailAuthFragment : Fragment() {
                 binding.edtEmailEmailAuth.error = "이메일 형식을 확인해주세요"
             }
         }
+        binding.btnBack.setOnClickListener { findNavController().navigateUp() }
     }
 
     private fun observe() {
@@ -75,6 +78,7 @@ class EmailAuthFragment : Fragment() {
 
                 }
                 is DataState.Loading -> {
+                    binding.btnRequestAuthEmailAuth.isEnabled=false
                     binding.edtEmailEmailAuth.isEnabled = false
                     binding.containerAuthCodeEmailAuth.visibility = View.VISIBLE
                 }

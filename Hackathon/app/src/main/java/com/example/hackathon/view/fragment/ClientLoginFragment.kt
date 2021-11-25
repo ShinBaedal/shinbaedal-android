@@ -1,6 +1,7 @@
 package com.example.hackathon.view.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,15 +36,10 @@ class ClientLoginFragment : Fragment() {
         autoLogin()
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewModelStore.clear()
-    }
 
     private fun login() {
         val email = binding.edtEmailOwnerLogin.text.toString()
         val pw = binding.edtPwClientLogin.text.toString()
-
         viewModel.loginClient(email, pw)
     }
 

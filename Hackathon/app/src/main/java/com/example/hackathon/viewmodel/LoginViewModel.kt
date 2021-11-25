@@ -8,6 +8,7 @@ import com.example.hackathon.domain.response.AuthToken
 import com.example.hackathon.domain.response.DataState
 import com.example.hackathon.data.repository.LoginRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch

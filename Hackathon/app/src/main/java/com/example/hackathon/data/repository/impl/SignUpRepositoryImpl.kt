@@ -14,8 +14,8 @@ class SignUpRepositoryImpl @Inject constructor(private val accountDataSource: Ac
     override suspend fun requestEmailAuth(email: String): Flow<BaseResponse> =
         accountDataSource.requestEmailAuth(email)
 
-    override suspend fun checkCode(code: Int): Flow<BaseResponse> =
-        accountDataSource.checkCode(code)
+    override suspend fun checkCode(email: String,code: String): Flow<BaseResponse> =
+        accountDataSource.checkCode(email,code)
 
     override suspend fun signUpOwner(body: SignupRequest): Flow<DataResponse<AuthToken>> =
         accountDataSource.ownerSignup(body)

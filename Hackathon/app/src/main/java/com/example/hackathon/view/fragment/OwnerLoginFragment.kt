@@ -35,11 +35,6 @@ class OwnerLoginFragment : Fragment() {
         observe()
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewModelStore.clear()
-    }
-
     private fun login() {
         val email = binding.edtEmailOwnerLogin.text.toString()
         val pw = binding.edtPwOwnerLogin.text.toString()

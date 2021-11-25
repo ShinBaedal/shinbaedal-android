@@ -41,17 +41,20 @@ class SignupFragment : Fragment() {
         binding.btnSignupSignup.setOnClickListener {
             if (checkInput()) {
                 signup()
+            } else {
+                Toast.makeText(requireContext(), "입력이 잘못 되었습니다", Toast.LENGTH_SHORT).show()
             }
+        }
+        binding.btnToLoginSignup.setOnClickListener {
+            findNavController().navigate(R.id.action_signupFragment_to_clientLoginFragment)
         }
     }
 
     private fun checkInput(): Boolean {
-        val pw = binding.edtPwSignup
-        val pwAgain = binding.edtPwAgainSignup
-        val name = binding.edtNameSignup
-
-
-        if (pw.text != pwAgain.text) return false
+        val pw = binding.edtPwSignup.text.toString()
+        val pwAgain = binding.edtPwAgainSignup.text.toString()
+        val name = binding.edtNameSignup.text.toString()
+        if (pw != pwAgain) return false
 
         return true
 
@@ -62,6 +65,7 @@ class SignupFragment : Fragment() {
         val pw = binding.edtPwSignup.text.toString()
         val name = binding.edtNameSignup.text.toString()
         val isClient = binding.radioClientSignup.isChecked
+
         if (isClient) {
             viewModel.signupClient(email, pw, name)
         } else {

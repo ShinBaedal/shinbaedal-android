@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Hackathon</string>
-    <string name="name_format">$s 회원가입</string>
+    <string name="name_format">%s 회원가입</string>
     <string name="positive">긍정</string>
     <string name="neutrality">중립</string>
     <string name="denial">부정</string>

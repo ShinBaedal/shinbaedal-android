@@ -74,16 +74,17 @@
             android:layout_height="wrap_content"
             android:text="인증 코드 보내기 >"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <LinearLayout
+
             android:id="@+id/container_auth_code_email_auth"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:layout_marginTop="10dp"
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -135,6 +136,7 @@ android:layout_marginTop="5dp"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/btn_back"
             android:layout_marginBottom="64dp"
             android:text="로그인 하러 가기>"
             android:textColor="@color/dark_grey"

@@ -66,6 +66,7 @@ class SignupViewModel @Inject constructor(private val signupRepository: SignupRe
                     emailAuthState.postValue(DataState.Failure(500, "서버 연결에 실패했어요"))
                 }
                 .collect {
+                    Log.d(TAG, it.message.toString())
                     when (it.code) {
                         200 -> emailAuthState.postValue(DataState.Loading)
                         409 -> emailAuthState.postValue(DataState.Failure(it.code, it.message))
@@ -74,9 +75,9 @@ class SignupViewModel @Inject constructor(private val signupRepository: SignupRe
         }
     }
 
-    fun checkCode(code: Int) {
+    fun checkCode(email: String,code: String) {
         job = viewModelScope.launch {
-            signupRepository.checkCode(code)
+            signupRepository.checkCode(email,code)
                 .catch {
                     Log.d(TAG, it.message.toString())
                 }

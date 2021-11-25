@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/login_edit_background"
                     android:hint="이메일 입력.."
-                    android:inputType="textPassword" />
+                    android:inputType="textWebEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
