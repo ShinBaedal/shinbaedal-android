@@ -32,7 +32,7 @@ object RepositoryModule {
     }
     @Provides
     @Singleton
-    fun provideOwnerStoreRepository(dataSource: OwnerStoreDataStore): OwnerStoreRepository {
+    fun provideOwnerStoreRepository(dataSource: OwnerStoreDataSource): OwnerStoreRepository {
         return OwnerStoreRepositoryImpl(dataSource)
     }
     @Provides

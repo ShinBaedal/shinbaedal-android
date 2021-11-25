@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface OwnerStoreRepository {
     suspend fun patchStore(
-        token: String,
         storeId: Int,
         request: PatchStoreRequest
     ): BaseResponse
