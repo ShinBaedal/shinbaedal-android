@@ -12,19 +12,42 @@
         android:layout_height="match_parent"
         tools:context=".view.fragment.ClientLoginFragment">
 
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/client_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="손님으로 로그인"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
         <LinearLayout
             android:id="@+id/container_client_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textView13">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_height="wrap_content"
                 android:text="이메일"
                 android:textColor="@color/black" />
@@ -37,6 +60,7 @@
                     android:id="@+id/edt_email_owner_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_background"
                     android:hint="이메일 입력.."
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -47,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="비밀번호"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,6 +82,7 @@
                     android:id="@+id/edt_pw_client_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_background"
                     android:hint="비밀번호 입력.."
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -67,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/main"
+                android:background="@drawable/owner_add_edit_background"
                 android:text="로그인"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -89,10 +116,9 @@
             android:text="회원가입 하러 가기"
             android:textColor="@color/dark_grey"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="64dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
