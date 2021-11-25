@@ -63,8 +63,7 @@ class OwnerLoginFragment : Fragment() {
                     Pref.token = it.data.token
                     Pref.isOwner = true
                     viewModelStore.clear()
-                    findNavController().popBackStack(R.id.ownerLoginFragment, true)
-                    navigateToOwnerMain()
+                     navigateToOwnerMain()
                 }
                 is DataState.Failure -> {
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()

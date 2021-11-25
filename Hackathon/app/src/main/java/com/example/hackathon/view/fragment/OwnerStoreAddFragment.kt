@@ -65,7 +65,7 @@ class OwnerStoreAddFragment :
             constraintLayout3.transitionToEnd()
         }
         binding.btnAddImageAddStore.setOnClickListener {
-            getResult.launch("")
+            getResult.launch("image/* ")
         }
         binding.btnAddMenuAddStore.setOnClickListener {
             val price = binding.edtMenuPriceAddStore.text.toString().toLong() //메뉴 가격
