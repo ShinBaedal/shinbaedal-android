@@ -1,4 +1,4 @@
-package com.example.hackathon.domain.response
+package com.example.hackathon.domain.entity
 
 data class Store(
     val id: Long,

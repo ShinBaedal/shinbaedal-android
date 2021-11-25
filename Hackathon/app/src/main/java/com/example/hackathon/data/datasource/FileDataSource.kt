@@ -2,7 +2,7 @@ package com.example.hackathon.data.datasource
 
 import com.example.hackathon.data.api.FileApi
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.PhotoUrl
+import com.example.hackathon.domain.entity.PhotoUrl
 import kotlinx.coroutines.flow.flow
 import okhttp3.MultipartBody
 import javax.inject.Inject

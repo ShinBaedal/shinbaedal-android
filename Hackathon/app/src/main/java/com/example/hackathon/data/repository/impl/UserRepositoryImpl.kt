@@ -4,7 +4,7 @@ import com.example.hackathon.data.datasource.UserDataSource
 import com.example.hackathon.data.repository.UserRepository
 import com.example.hackathon.domain.response.BaseResponse
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.Me
+import com.example.hackathon.domain.entity.Me
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

@@ -2,7 +2,7 @@ package com.example.hackathon.data.datasource
 
 import com.example.hackathon.data.api.StoreApi
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Store
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

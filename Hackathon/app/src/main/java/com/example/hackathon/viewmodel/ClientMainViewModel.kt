@@ -6,8 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.hackathon.data.repository.StoreRepository
 import com.example.hackathon.data.repository.UserRepository
 import com.example.hackathon.domain.response.DataState
-import com.example.hackathon.domain.response.Me
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Me
+import com.example.hackathon.domain.entity.Store
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect

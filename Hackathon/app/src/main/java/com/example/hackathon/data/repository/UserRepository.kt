@@ -2,7 +2,7 @@ package com.example.hackathon.data.repository
 
 import com.example.hackathon.domain.response.BaseResponse
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.Me
+import com.example.hackathon.domain.entity.Me
 import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {

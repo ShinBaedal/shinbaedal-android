@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
 import com.example.hackathon.R
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Store
 
 class StoreHorizontalAdapter(val itemClickListener: RecyclerViewItemClickListener<Store>) :
     RecyclerView.Adapter<StoreHorizontalAdapter.StoreViewHolder>() {

@@ -1,7 +1,7 @@
 package com.example.hackathon.data.repository
 
 import com.example.hackathon.domain.response.DataResponse
-import com.example.hackathon.domain.response.Store
+import com.example.hackathon.domain.entity.Store
 import kotlinx.coroutines.flow.Flow
 
 interface StoreRepository {
