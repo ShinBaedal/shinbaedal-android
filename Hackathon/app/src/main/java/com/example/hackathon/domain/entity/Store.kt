@@ -7,5 +7,5 @@ data class Store(
     val photoUrl: String,
     val tell: String,
     val address: String,
-    val rate: Int
+    val rate: Float
 )
