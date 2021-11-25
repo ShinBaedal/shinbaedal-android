@@ -99,27 +99,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout8"
-            android:layout_width="match_parent"
-            android:layout_height="78dp"
-            android:background="@color/white"
-            android:elevation="10dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout4">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/owner_add_btn_background"
-                android:text="추가 하기"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/linearLayout4" />
-        </LinearLayout>
 
         <View
             android:id="@+id/offset_owner_store_add"
@@ -150,7 +129,9 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/img_menu_detail_owner_detail"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/btn_add_image_add_store"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/grey"
@@ -174,7 +155,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/cv" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/edt_name_price_add_store"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -194,15 +175,15 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/cv"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/edt_name_price_add_store" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/edt_menu_price_add_store"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/card_rectangle"
-                android:hint="메뉴 이름 입력.."
+                android:hint="메뉴 가격 입력.."
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/cv"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -215,11 +196,12 @@
                 android:padding="5dp"
                 android:text="추가하기"
                 android:textColor="@color/white"
+                android:id="@+id/btn_add_menu_add_store"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/editText2"
-                app:layout_constraintStart_toStartOf="@+id/editText2"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintEnd_toEndOf="@+id/edt_menu_price_add_store"
+                app:layout_constraintStart_toStartOf="@+id/edt_menu_price_add_store"
+                app:layout_constraintTop_toBottomOf="@+id/edt_menu_price_add_store" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.motion.widget.MotionLayout>

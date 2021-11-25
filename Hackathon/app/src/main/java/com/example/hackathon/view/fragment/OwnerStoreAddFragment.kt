@@ -23,4 +23,15 @@ class OwnerStoreAddFragment :
             dialog.show(parentFragmentManager, "dialog")
         }
     }
+    fun bind()= with(binding){
+        binding.addBtn.setOnClickListener {
+            constraintLayout3.transitionToEnd()
+        }
+        binding.btnAddMenuAddStore.setOnClickListener {
+            binding.edtMenuPriceAddStore //메뉴 가겨
+            binding.edtNamePriceAddStore //메뉴 이름
+
+            constraintLayout3.transitionToStart()
+        }
+    }
 }

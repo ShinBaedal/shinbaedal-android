@@ -229,7 +229,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_menu_detail_owner_detail"
+                    android:id="@+id/btn_add_image_add_store"
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:scaleType="centerCrop"

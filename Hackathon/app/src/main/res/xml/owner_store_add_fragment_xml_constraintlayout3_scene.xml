@@ -7,12 +7,7 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="500">
-       <KeyFrameSet>
-           <KeyAttribute
-               motion:motionTarget="@+id/linearLayout8"
-               motion:framePosition="1"
-               android:alpha="0" />
-       </KeyFrameSet>
+       <KeyFrameSet></KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -37,12 +32,11 @@
             android:layout_height="match_parent"
             android:visibility="visible"
             android:alpha="0.7" />
-        <Constraint
-            android:id="@+id/linearLayout8"
-            android:elevation="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="78dp"
-            motion:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
-            android:visibility="invisible" />
+
     </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/start" >
+        <OnClick motion:targetId="@+id/offset_owner_store_add" />
+    </Transition>
 </MotionScene>
