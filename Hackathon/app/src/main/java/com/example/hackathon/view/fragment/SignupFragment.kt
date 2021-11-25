@@ -61,7 +61,7 @@ class SignupFragment : Fragment() {
     }
 
     private fun signup() {
-        val email = arguments?.getString("type")!!
+        val email = arguments?.getString("email")!!
         val pw = binding.edtPwSignup.text.toString()
         val name = binding.edtNameSignup.text.toString()
         val isClient = binding.radioClientSignup.isChecked
